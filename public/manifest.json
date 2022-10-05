@@ -4,7 +4,7 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "PWA App",
+  "name": "Meu App",
   "description": "PWA App Template",
   "short_name": "PWA app",
   "icons": [
