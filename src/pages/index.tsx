@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Copyright } from "../components/Copyright";
-import { WelcomeDaisyUI } from '../components/WelcomeDaisyUI';
 
 const Home: NextPage = () => {
   return (
@@ -15,8 +13,6 @@ const Home: NextPage = () => {
         <h1 className="text-white">
           Front-end PWA Template
         </h1>
-        <WelcomeDaisyUI />
-        <Copyright />
       </main>
     </div>
   );

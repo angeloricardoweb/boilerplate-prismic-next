@@ -1,0 +1,11 @@
+.btn {
+  @apply px-4 py-2 w-full sm:w-fit rounded-md flex items-center gap-2 justify-center active:scale-90 transition duration-200 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white hover:bg-blue-600 border border-blue-500;
+}
+
+.btn-outline {
+  @apply bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white;
+}
