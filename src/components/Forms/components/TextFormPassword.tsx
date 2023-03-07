@@ -19,20 +19,20 @@ export function TextFormPassword({
 
   return (
     <div className="relative">
-      <div className="label-float">
-        <input
-          type={showPassword}
-          minLength={6}
-          placeholder=" "
-          style={errors[name] && { border: '1px solid red' }}
-          {...register(name, {
-            required: { message: 'Campo obrigatório', value: required },
-          })}
-        />
-        <label>{label}</label>
-      </div>
+      <label htmlFor={name} className="label">
+        {label}
+      </label>
+      <input
+        type={showPassword}
+        minLength={6}
+        className="input-text"
+        style={errors[name] && { border: '1px solid red' }}
+        {...register(name, {
+          required: { message: 'Campo obrigatório', value: required },
+        })}
+      />
       <span
-        className="cursor-pointer absolute right-2 top-5"
+        className="cursor-pointer absolute right-2 top-1/2"
         onClick={() =>
           setShowPassword(showPassword === 'password' ? 'text' : 'password')
         }
@@ -40,11 +40,17 @@ export function TextFormPassword({
         {showPassword === 'password' ? (
           <Icon
             icon="ant-design:eye-invisible-outlined"
+            className="text-zinc-400"
             width="20"
             height="20"
           />
         ) : (
-          <Icon icon="ant-design:eye-outlined" width="20" height="20" />
+          <Icon
+            icon="ant-design:eye-outlined"
+            width="20"
+            height="20"
+            className="text-zinc-400"
+          />
         )}
       </span>
       <LabelError

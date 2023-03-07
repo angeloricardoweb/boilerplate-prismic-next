@@ -16,17 +16,18 @@ export function TextForm({
 }) {
   return (
     <div>
-      <div className="label-float">
-        <input
-          type="text"
-          placeholder=" "
-          style={errors[name] && { border: '1px solid red' }}
-          {...register(name, {
-            required: { message: 'Campo obrigatório', value: required },
-          })}
-        />
-        <label>{label}</label>
-      </div>
+      <label htmlFor={name} className="label">
+        {label}
+      </label>
+      <input
+        type="text"
+        id={name}
+        style={errors[name] && { border: '1px solid red' }}
+        {...register(name, {
+          required: { message: 'Campo obrigatório', value: required },
+        })}
+        className="input-text"
+      />
       <LabelError
         msg={errors[name]?.message as string}
         hasError={errors[name] as any}
