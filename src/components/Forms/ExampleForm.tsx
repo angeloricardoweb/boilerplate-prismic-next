@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { TextForm } from './TextForm'
-import { TextFormPassword } from './TextFormPassword'
+import { TextForm } from './components/TextForm'
+import { TextFormPassword } from './components/TextFormPassword'
 
 interface FormProps {
   email: string
