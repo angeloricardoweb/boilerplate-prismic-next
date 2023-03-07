@@ -19,6 +19,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.34.2",
     "react-reveal": "^1.2.2",
+    "react-use": "^17.4.0",
     "sass": "^1.54.5",
     "swiper": "^9.1.0",
     "zustand": "^4.3.5"
