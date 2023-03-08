@@ -7,12 +7,14 @@ export function TextForm({
   name,
   label,
   required = false,
+  disabled = false,
 }: {
   register: any
   errors: any
   name: string
   label: string
   required?: boolean
+  disabled?: boolean
 }) {
   return (
     <div>
@@ -27,6 +29,7 @@ export function TextForm({
           required: { message: 'Campo obrigatório', value: required },
         })}
         className="input-text"
+        disabled={disabled}
       />
       <LabelError
         msg={errors[name]?.message as string}
