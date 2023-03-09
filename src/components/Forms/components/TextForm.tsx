@@ -8,6 +8,7 @@ export function TextForm({
   label,
   required = false,
   disabled = false,
+  placeholder = ' ',
 }: {
   register: any
   errors: any
@@ -15,6 +16,7 @@ export function TextForm({
   label: string
   required?: boolean
   disabled?: boolean
+  placeholder?: string
 }) {
   return (
     <div>
@@ -24,6 +26,7 @@ export function TextForm({
       <input
         type="text"
         id={name}
+        placeholder={placeholder}
         style={errors[name] && { border: '1px solid red' }}
         {...register(name, {
           required: { message: 'Campo obrigatório', value: required },
