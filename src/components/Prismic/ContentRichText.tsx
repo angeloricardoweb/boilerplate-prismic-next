@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable @next/next/no-img-element */
 import { PrismicRichText } from '@prismicio/react'
 
@@ -45,7 +44,7 @@ export default function ContentRichText({ data }: { data: [] | undefined }) {
           />
         ),
         hyperlink: ({ children, node }) => (
-          <a href={node.data.url} target="_blank">
+          <a href={node.data.url} target="_blank" rel="noreferrer" >
             {children}
           </a>
         ),
