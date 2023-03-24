@@ -1,0 +1,21 @@
+{
+  "instagram": {
+    "__TYPE__": "FieldContent",
+    "value": "plural",
+    "type": "Text"
+  },
+  "facebook": {
+    "__TYPE__": "FieldContent",
+    "value": "harder",
+    "type": "Text"
+  },
+  "email": {
+    "__TYPE__": "FieldContent",
+    "value": "setting",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": []
+  }
+}
