@@ -11,7 +11,7 @@ export function Copyright() {
           </p>
           <div className="flex items-center">
             <p className="text-white flex items-center text-sm m-0">
-              <a href="https://www.bredi.com.br/" target="_blank">
+              <a href="https://www.bredi.com.br/" target="_blank" rel="noreferrer">
                 Desenvolvido por Bredi{' '}
                 <img
                   src="/bredi.png"
