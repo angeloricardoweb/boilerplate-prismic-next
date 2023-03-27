@@ -1,6 +1,7 @@
 {
   "_cts": {
-    "contatos": {}
+    "contatos": {},
+    "banners_da_home": {}
   },
   "slices": {
     "TextBlock": {}

@@ -6,6 +6,56 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Banners da Home documents */
+interface BannersDaHomeDocumentData {
+    /**
+     * Banners field in *Banners da Home*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: banners_da_home.banners[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    banners: prismicT.GroupField<Simplify<BannersDaHomeDocumentDataBannersItem>>;
+}
+/**
+ * Item in Banners da Home → Banners
+ *
+ */
+export interface BannersDaHomeDocumentDataBannersItem {
+    /**
+     * Banner field in *Banners da Home → Banners*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: banners_da_home.banners[].banner
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    banner: prismicT.ImageField<never>;
+    /**
+     * Link field in *Banners da Home → Banners*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: banners_da_home.banners[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Banners da Home document from Prismic
+ *
+ * - **API ID**: `banners_da_home`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BannersDaHomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<BannersDaHomeDocumentData>, "banners_da_home", Lang>;
 /** Content for Contatos documents */
 interface ContatosDocumentData {
     /**
@@ -68,7 +118,7 @@ type ContatosDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type ContatosDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<ContatosDocumentData>, "contatos", Lang>;
-export type AllDocumentTypes = ContatosDocument;
+export type AllDocumentTypes = BannersDaHomeDocument | ContatosDocument;
 /**
  * Primary content in TextBlock → Primary
  *
@@ -123,6 +173,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ContatosDocumentData, ContatosDocumentDataSlicesSlice, ContatosDocument, AllDocumentTypes, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { BannersDaHomeDocumentData, BannersDaHomeDocumentDataBannersItem, BannersDaHomeDocument, ContatosDocumentData, ContatosDocumentDataSlicesSlice, ContatosDocument, AllDocumentTypes, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

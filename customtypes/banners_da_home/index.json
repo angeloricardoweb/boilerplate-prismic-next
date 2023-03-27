@@ -1,0 +1,34 @@
+{
+  "id": "banners_da_home",
+  "label": "Banners da Home",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "banners": {
+        "type": "Group",
+        "config": {
+          "label": "Banners",
+          "fields": {
+            "banner": {
+              "type": "Image",
+              "config": {
+                "label": "Banner",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
