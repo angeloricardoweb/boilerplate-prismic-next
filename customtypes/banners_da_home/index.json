@@ -25,6 +25,20 @@
                 "placeholder": "",
                 "select": null
               }
+            },
+            "descricao": {
+              "type": "Text",
+              "config": {
+                "label": "Descrição",
+                "placeholder": ""
+              }
+            },
+            "sub_descricao": {
+              "type": "Text",
+              "config": {
+                "label": "Sub Descrição",
+                "placeholder": ""
+              }
             }
           }
         }

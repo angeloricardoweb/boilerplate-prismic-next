@@ -1,0 +1,65 @@
+{
+  "thumbnail": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+      "width": 2747,
+      "height": 4120
+    },
+    "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?rect=0%2C687%2C2747%2C2747&w=900&h=900",
+    "width": 900,
+    "height": 900,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 687
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "resumo": {
+    "__TYPE__": "FieldContent",
+    "value": "victory",
+    "type": "Text"
+  },
+  "banner": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+      "width": 3560,
+      "height": 5340
+    },
+    "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+    "width": 3560,
+    "height": 5340,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "conteudo": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Elit excepteur proident sint incididunt est veniam enim nulla occaecat nisi qui laborum cillum et dolore. Ex nisi irure do ad proident esse Lorem ullamco consequat enim sunt qui voluptate."
+        }
+      }
+    ]
+  },
+  "categoria": {
+    "__TYPE__": "FieldContent",
+    "value": "Natureza",
+    "type": "Select"
+  }
+}

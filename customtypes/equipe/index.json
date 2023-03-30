@@ -1,0 +1,43 @@
+{
+  "id": "equipe",
+  "label": "Equipe",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "lista": {
+        "type": "Group",
+        "config": {
+          "label": "Lista",
+          "fields": {
+            "foto": {
+              "type": "Image",
+              "config": {
+                "label": "Foto",
+                "constraint": {
+                  "width": 900,
+                  "height": 900
+                },
+                "thumbnails": []
+              }
+            },
+            "nome": {
+              "type": "Text",
+              "config": {
+                "label": "Nome",
+                "placeholder": ""
+              }
+            },
+            "cargo": {
+              "type": "Text",
+              "config": {
+                "label": "Cargo",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

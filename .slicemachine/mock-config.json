@@ -1,7 +1,18 @@
 {
   "_cts": {
     "contatos": {},
-    "banners_da_home": {}
+    "banners_da_home": {
+      "banners": {}
+    },
+    "enderecos": {
+      "endereco": {}
+    },
+    "servico": {},
+    "clientes": {},
+    "equipe": {
+      "lista": {}
+    },
+    "post": {}
   },
   "slices": {
     "TextBlock": {}

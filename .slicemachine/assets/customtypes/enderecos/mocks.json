@@ -1,0 +1,44 @@
+{
+  "endereco": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "nome",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "coming",
+              "type": "Text"
+            }
+          ],
+          [
+            "logradouro",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "pine",
+              "type": "Text"
+            }
+          ],
+          [
+            "bairro_e_cidade",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "fence",
+              "type": "Text"
+            }
+          ],
+          [
+            "cep",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "religious",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

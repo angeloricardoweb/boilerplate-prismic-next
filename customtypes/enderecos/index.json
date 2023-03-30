@@ -1,0 +1,46 @@
+{
+  "id": "enderecos",
+  "label": "Endereços",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "endereco": {
+        "type": "Group",
+        "config": {
+          "label": "Endereço",
+          "fields": {
+            "nome": {
+              "type": "Text",
+              "config": {
+                "label": "Nome",
+                "placeholder": ""
+              }
+            },
+            "logradouro": {
+              "type": "Text",
+              "config": {
+                "label": "Logradouro",
+                "placeholder": ""
+              }
+            },
+            "bairro_e_cidade": {
+              "type": "Text",
+              "config": {
+                "label": "Bairro e Cidade",
+                "placeholder": ""
+              }
+            },
+            "cep": {
+              "type": "Text",
+              "config": {
+                "label": "CEP",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
