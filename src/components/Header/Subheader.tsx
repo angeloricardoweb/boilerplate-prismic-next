@@ -8,8 +8,8 @@ export default function Subheader({
   return (
     <div className="py-5 border-b">
       <Container>
-        <span className="text-brand-gray-50">Você está em</span>
-        <h2>{title}</h2>
+        <span className="text-zinc-400">Você está em</span>
+        <h2 className='text-white'>{title}</h2>
       </Container>
     </div>
   )

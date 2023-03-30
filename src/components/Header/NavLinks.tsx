@@ -9,19 +9,7 @@ export const navLinks = [
     name: 'Sobre Nós',
   },
   {
-    route: '/servicos',
-    name: 'Serviços',
-  },
-  {
-    route: '/clientes',
-    name: 'Clientes',
-  },
-  {
-    route: '/parceiros',
-    name: 'Contato',
-  },
-  {
-    route: '/contato',
+    route: '/contatos',
     name: 'Contatos',
   },
 ]
@@ -31,7 +19,7 @@ export default function NavLinks() {
     <>
       {navLinks.map((link) => (
         <Link key={link.name} href={link.route}>
-          <span className="text-white">{link.name}</span>
+          <span className="text-white cursor-pointer">{link.name}</span>
         </Link>
       ))}
       <a href="/" rel="noreferrer" target="_blank">

@@ -1,0 +1,8 @@
+{
+  "apiEndpoint": "https://angeloricardoweb.prismic.io/api/v2",
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "libraries": [
+    "@/slices"
+  ],
+  "_latest": "0.7.1"
+}

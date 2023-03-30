@@ -8,19 +8,23 @@ export function Copyright() {
       <Container>
         <div className="flex items-center justify-center md:justify-between flex-col md:flex-row">
           <p className="text-white text-sm m-0">
-            Braga - Soluções Tributarias {new Date().getFullYear()} ©
-            Todos os direitos reservados
+            Boilerplate Next {new Date().getFullYear()} © Todos os direitos
+            reservados
           </p>
           <div className="flex items-center">
             <p className="text-white flex items-center text-sm m-0">
-              <a href="https://www.bredi.com.br/" target="_blank" rel="noreferrer">
-                Desenvolvido por Bredi{' '}
-                <img
+              <a
+                href="https://www.bredi.com.br/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {/* Desenvolvido por */}
+                {/* <img
                   src="/bredi.png"
                   alt="bredi tecnologia"
                   width={18}
                   className="inline-block"
-                />
+                /> */}
               </a>
             </p>
           </div>
