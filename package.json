@@ -31,6 +31,7 @@
     "react-use": "^17.4.0",
     "sass": "^1.54.5",
     "swiper": "^9.1.0",
+    "swr": "^2.1.1",
     "zustand": "^4.3.5"
   },
   "devDependencies": {

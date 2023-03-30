@@ -1,10 +1,15 @@
 import type { NextPage, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { client } from '../services/prismicClient'
+import useSWR from 'swr'
 
-type inferedTypes = InferGetStaticPropsType<typeof getStaticProps>
+// type inferedTypes = InferGetStaticPropsType<typeof getStaticProps>
 
-const Home: NextPage<inferedTypes> = ({ contatos }) => {
+const Home: NextPage = () => {
+  const { data: bannersHome } = useSWR('banners_da_home', () =>
+    client.getSingle('banners_da_home')
+  )
+
   return (
     <div>
       <Head>
@@ -14,23 +19,9 @@ const Home: NextPage<inferedTypes> = ({ contatos }) => {
       </Head>
       <main className="flex items-center justify-center flex-col gap-5 pt-4">
         <h1 className="text-white">Front-end Next 12 Template</h1>
-        <p>{contatos?.data.email_principal}</p>
-        <p>{contatos?.data.facebook_link}</p>
-        <p>{contatos?.data.instagram_link}</p>
       </main>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  const contatos = await client.getSingle('contatos')
-
-  return {
-    props: {
-      contatos,
-    },
-    revalidate: 60, // In seconds
-  }
 }
 
 export default Home
