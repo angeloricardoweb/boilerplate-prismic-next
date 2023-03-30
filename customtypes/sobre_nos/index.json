@@ -29,6 +29,23 @@
           "multi": "paragraph,heading2,heading3,strong,em,hyperlink,image,list-item,o-list-item"
         }
       }
+    },
+    "Home": {
+      "banner_secundario": {
+        "type": "Image",
+        "config": {
+          "label": "Banner_secundario",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "descricao_secundaria": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição Secundária",
+          "placeholder": ""
+        }
+      }
     }
   }
 }

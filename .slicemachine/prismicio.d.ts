@@ -577,6 +577,28 @@ interface SobreNosDocumentData {
      *
      */
     conteudo: prismicT.RichTextField;
+    /**
+     * Banner_secundario field in *Sobre Nós*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sobre_nos.banner_secundario
+     * - **Tab**: Home
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    banner_secundario: prismicT.ImageField<never>;
+    /**
+     * Descrição Secundária field in *Sobre Nós*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sobre_nos.descricao_secundaria
+     * - **Tab**: Home
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    descricao_secundaria: prismicT.KeyTextField;
 }
 /**
  * Sobre Nós document from Prismic
@@ -589,60 +611,11 @@ interface SobreNosDocumentData {
  */
 export type SobreNosDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SobreNosDocumentData>, "sobre_nos", Lang>;
 export type AllDocumentTypes = BannersDaHomeDocument | ClientesDocument | ContatosDocument | EnderecosDocument | EquipeDocument | PostDocument | ServicoDocument | SobreNosDocument;
-/**
- * Primary content in TextBlock → Primary
- *
- */
-interface TextBlockSliceDefaultPrimary {
-    /**
-     * Title field in *TextBlock → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: text_block.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *TextBlock → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: text_block.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-}
-/**
- * Default variation for TextBlock Slice
- *
- * - **API ID**: `default`
- * - **Description**: `TextBlock`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TextBlockSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextBlockSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *TextBlock*
- *
- */
-type TextBlockSliceVariation = TextBlockSliceDefault;
-/**
- * TextBlock Shared Slice
- *
- * - **API ID**: `text_block`
- * - **Description**: `TextBlock`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TextBlockSlice = prismicT.SharedSlice<"text_block", TextBlockSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BannersDaHomeDocumentData, BannersDaHomeDocumentDataBannersItem, BannersDaHomeDocument, ClientesDocumentData, ClientesDocumentDataListaItem, ClientesDocument, ContatosDocumentData, ContatosDocumentDataSlicesSlice, ContatosDocument, EnderecosDocumentData, EnderecosDocumentDataEnderecoItem, EnderecosDocument, EquipeDocumentData, EquipeDocumentDataListaItem, EquipeDocument, PostDocumentData, PostDocument, ServicoDocumentData, ServicoDocument, SobreNosDocumentData, SobreNosDocument, AllDocumentTypes, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { BannersDaHomeDocumentData, BannersDaHomeDocumentDataBannersItem, BannersDaHomeDocument, ClientesDocumentData, ClientesDocumentDataListaItem, ClientesDocument, ContatosDocumentData, ContatosDocumentDataSlicesSlice, ContatosDocument, EnderecosDocumentData, EnderecosDocumentDataEnderecoItem, EnderecosDocument, EquipeDocumentData, EquipeDocumentDataListaItem, EquipeDocument, PostDocumentData, PostDocument, ServicoDocumentData, ServicoDocument, SobreNosDocumentData, SobreNosDocument, AllDocumentTypes };
     }
 }
