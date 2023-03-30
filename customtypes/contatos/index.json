@@ -1,0 +1,101 @@
+{
+  "id": "contatos",
+  "label": "Contatos",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "instagram_link": {
+        "type": "Text",
+        "config": {
+          "label": "Instagram Link",
+          "placeholder": ""
+        }
+      },
+      "facebook_link": {
+        "type": "Text",
+        "config": {
+          "label": "Facebook Link",
+          "placeholder": ""
+        }
+      },
+      "twitter_link": {
+        "type": "Text",
+        "config": {
+          "label": "Twitter Link",
+          "placeholder": ""
+        }
+      },
+      "youtube_link": {
+        "type": "Text",
+        "config": {
+          "label": "Youtube Link",
+          "placeholder": ""
+        }
+      },
+      "tiktok_link": {
+        "type": "Text",
+        "config": {
+          "label": "TikTok Link",
+          "placeholder": ""
+        }
+      },
+      "linkedin_link": {
+        "type": "Text",
+        "config": {
+          "label": "Linkedin Link",
+          "placeholder": ""
+        }
+      },
+      "email_principal": {
+        "type": "Text",
+        "config": {
+          "label": "E-mail Principal",
+          "placeholder": ""
+        }
+      },
+      "email_secundario": {
+        "type": "Text",
+        "config": {
+          "label": "E-mail Secundário",
+          "placeholder": ""
+        }
+      },
+      "telefone_principal": {
+        "type": "Text",
+        "config": {
+          "label": "Telefone Principal",
+          "placeholder": ""
+        }
+      },
+      "telefone_secundario": {
+        "type": "Text",
+        "config": {
+          "label": "Telefone Secundário",
+          "placeholder": ""
+        }
+      },
+      "whatsapp_link": {
+        "type": "Text",
+        "config": {
+          "label": "Whatsapp Link",
+          "placeholder": ""
+        }
+      },
+      "cnpj": {
+        "type": "Text",
+        "config": {
+          "label": "CNPJ",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

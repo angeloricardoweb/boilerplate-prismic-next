@@ -1,0 +1,51 @@
+{
+  "id": "sobre_nos",
+  "label": "Sobre Nós",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "banner": {
+        "type": "Image",
+        "config": {
+          "label": "Banner",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "resumo": {
+        "type": "Text",
+        "config": {
+          "label": "Resumo",
+          "placeholder": ""
+        }
+      },
+      "conteudo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Conteúdo",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading2,heading3,strong,em,hyperlink,image,list-item,o-list-item"
+        }
+      }
+    },
+    "Home": {
+      "banner_secundario": {
+        "type": "Image",
+        "config": {
+          "label": "Banner_secundario",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "descricao_secundaria": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição Secundária",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

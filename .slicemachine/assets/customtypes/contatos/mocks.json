@@ -1,0 +1,66 @@
+{
+  "instagram_link": {
+    "__TYPE__": "FieldContent",
+    "value": "supply",
+    "type": "Text"
+  },
+  "facebook_link": {
+    "__TYPE__": "FieldContent",
+    "value": "wave",
+    "type": "Text"
+  },
+  "twitter_link": {
+    "__TYPE__": "FieldContent",
+    "value": "story",
+    "type": "Text"
+  },
+  "youtube_link": {
+    "__TYPE__": "FieldContent",
+    "value": "knife",
+    "type": "Text"
+  },
+  "tiktok_link": {
+    "__TYPE__": "FieldContent",
+    "value": "alike",
+    "type": "Text"
+  },
+  "linkedin_link": {
+    "__TYPE__": "FieldContent",
+    "value": "history",
+    "type": "Text"
+  },
+  "email_principal": {
+    "__TYPE__": "FieldContent",
+    "value": "process",
+    "type": "Text"
+  },
+  "email_secundario": {
+    "__TYPE__": "FieldContent",
+    "value": "smallest",
+    "type": "Text"
+  },
+  "telefone_principal": {
+    "__TYPE__": "FieldContent",
+    "value": "primitive",
+    "type": "Text"
+  },
+  "telefone_secundario": {
+    "__TYPE__": "FieldContent",
+    "value": "riding",
+    "type": "Text"
+  },
+  "whatsapp_link": {
+    "__TYPE__": "FieldContent",
+    "value": "shadow",
+    "type": "Text"
+  },
+  "cnpj": {
+    "__TYPE__": "FieldContent",
+    "value": "biggest",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": []
+  }
+}

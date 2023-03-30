@@ -1,0 +1,33 @@
+{
+  "id": "clientes",
+  "label": "Clientes",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "lista": {
+        "type": "Group",
+        "config": {
+          "label": "Lista",
+          "fields": {
+            "logo": {
+              "type": "Image",
+              "config": {
+                "label": "Logo",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "titulo": {
+              "type": "Text",
+              "config": {
+                "label": "Titulo",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
