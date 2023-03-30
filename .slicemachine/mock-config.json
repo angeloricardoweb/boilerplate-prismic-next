@@ -12,7 +12,8 @@
     "equipe": {
       "lista": {}
     },
-    "post": {}
+    "post": {},
+    "sobre_nos": {}
   },
   "slices": {
     "TextBlock": {}

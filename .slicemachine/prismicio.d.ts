@@ -542,7 +542,53 @@ interface ServicoDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type ServicoDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<ServicoDocumentData>, "servico", Lang>;
-export type AllDocumentTypes = BannersDaHomeDocument | ClientesDocument | ContatosDocument | EnderecosDocument | EquipeDocument | PostDocument | ServicoDocument;
+/** Content for Sobre Nós documents */
+interface SobreNosDocumentData {
+    /**
+     * Banner field in *Sobre Nós*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sobre_nos.banner
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    banner: prismicT.ImageField<never>;
+    /**
+     * Resumo field in *Sobre Nós*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sobre_nos.resumo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    resumo: prismicT.KeyTextField;
+    /**
+     * Conteúdo field in *Sobre Nós*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sobre_nos.conteudo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    conteudo: prismicT.RichTextField;
+}
+/**
+ * Sobre Nós document from Prismic
+ *
+ * - **API ID**: `sobre_nos`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SobreNosDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SobreNosDocumentData>, "sobre_nos", Lang>;
+export type AllDocumentTypes = BannersDaHomeDocument | ClientesDocument | ContatosDocument | EnderecosDocument | EquipeDocument | PostDocument | ServicoDocument | SobreNosDocument;
 /**
  * Primary content in TextBlock → Primary
  *
@@ -597,6 +643,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BannersDaHomeDocumentData, BannersDaHomeDocumentDataBannersItem, BannersDaHomeDocument, ClientesDocumentData, ClientesDocumentDataListaItem, ClientesDocument, ContatosDocumentData, ContatosDocumentDataSlicesSlice, ContatosDocument, EnderecosDocumentData, EnderecosDocumentDataEnderecoItem, EnderecosDocument, EquipeDocumentData, EquipeDocumentDataListaItem, EquipeDocument, PostDocumentData, PostDocument, ServicoDocumentData, ServicoDocument, AllDocumentTypes, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { BannersDaHomeDocumentData, BannersDaHomeDocumentDataBannersItem, BannersDaHomeDocument, ClientesDocumentData, ClientesDocumentDataListaItem, ClientesDocument, ContatosDocumentData, ContatosDocumentDataSlicesSlice, ContatosDocument, EnderecosDocumentData, EnderecosDocumentDataEnderecoItem, EnderecosDocument, EquipeDocumentData, EquipeDocumentDataListaItem, EquipeDocument, PostDocumentData, PostDocument, ServicoDocumentData, ServicoDocument, SobreNosDocumentData, SobreNosDocument, AllDocumentTypes, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }
