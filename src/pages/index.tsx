@@ -18,7 +18,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex items-center justify-center flex-col gap-5 pt-4">
-        <h1 className="text-white">Front-end Next 12 Template</h1>
+        <h1 className="text-white">
+          Front-end Next 12 Template
+        </h1>
       </main>
     </div>
   )
