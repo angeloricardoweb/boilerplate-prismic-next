@@ -1,8 +1,10 @@
-import type { NextPage } from 'next'
+import type { NextPage, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { client } from '../services/prismicClient'
 
-const Home: NextPage = ({ contatos }) => {
+type inferedTypes = InferGetStaticPropsType<typeof getStaticProps>
+
+const Home: NextPage<inferedTypes> = ({ contatos }) => {
   return (
     <div>
       <Head>
@@ -12,9 +14,9 @@ const Home: NextPage = ({ contatos }) => {
       </Head>
       <main className="flex items-center justify-center flex-col gap-5 pt-4">
         <h1 className="text-white">Front-end Next 12 Template</h1>
-        <p>{contatos?.data.email}</p>
-        <p>{contatos?.data.facebook}</p>
-        <p>{contatos?.data.instagram}</p>
+        <p>{contatos?.data.email_principal}</p>
+        <p>{contatos?.data.facebook_link}</p>
+        <p>{contatos?.data.instagram_link}</p>
       </main>
     </div>
   )
