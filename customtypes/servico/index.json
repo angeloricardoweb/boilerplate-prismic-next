@@ -1,0 +1,41 @@
+{
+  "id": "servico",
+  "label": "Serviço",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título",
+          "placeholder": ""
+        }
+      },
+      "resumo": {
+        "type": "Text",
+        "config": {
+          "label": "Resumo",
+          "placeholder": ""
+        }
+      },
+      "descricao": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Descrição",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading2,strong,em,image,list-item,o-list-item,hyperlink,heading3"
+        }
+      },
+      "imagem": {
+        "type": "Image",
+        "config": {
+          "label": "Imagem",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

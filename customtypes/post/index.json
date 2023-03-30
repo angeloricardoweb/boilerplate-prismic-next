@@ -1,0 +1,58 @@
+{
+  "id": "post",
+  "label": "Post",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "thumbnail": {
+        "type": "Image",
+        "config": {
+          "label": "Thumbnail",
+          "constraint": {
+            "width": 900,
+            "height": 900
+          },
+          "thumbnails": []
+        }
+      },
+      "resumo": {
+        "type": "Text",
+        "config": {
+          "label": "Resumo",
+          "placeholder": ""
+        }
+      },
+      "banner": {
+        "type": "Image",
+        "config": {
+          "label": "Banner",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "conteudo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Conteúdo",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading2,heading3,strong,em,hyperlink,image,list-item,o-list-item"
+        }
+      },
+      "categoria": {
+        "type": "Select",
+        "config": {
+          "label": "Categoria",
+          "placeholder": "",
+          "options": [
+            "Notícia",
+            "Utilidade",
+            "Natureza",
+            "População"
+          ]
+        }
+      }
+    }
+  }
+}

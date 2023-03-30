@@ -1,0 +1,44 @@
+{
+  "titulo": {
+    "__TYPE__": "FieldContent",
+    "value": "trick",
+    "type": "Text"
+  },
+  "resumo": {
+    "__TYPE__": "FieldContent",
+    "value": "possibly",
+    "type": "Text"
+  },
+  "descricao": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Qui esse ea sunt enim culpa."
+        }
+      }
+    ]
+  },
+  "imagem": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+      "width": 6000,
+      "height": 4000
+    },
+    "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+    "width": 6000,
+    "height": 4000,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  }
+}
