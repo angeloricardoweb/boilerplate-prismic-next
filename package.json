@@ -8,6 +8,7 @@
     "export": "next build && next export",
     "start": "next start",
     "lint": "next lint",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
@@ -45,6 +46,7 @@
     "autoprefixer": "^10.4.8",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
+    "next-sitemap": "^4.0.9",
     "postcss": "^8.4.16",
     "slice-machine-ui": "^0.7.1",
     "tailwindcss": "^3.1.8",
