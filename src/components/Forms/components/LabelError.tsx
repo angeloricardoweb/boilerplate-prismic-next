@@ -1,16 +1,15 @@
 import React from 'react'
 
-export function LabelError({
-  msg,
-  hasError = true,
-}: {
-  msg: string
-  hasError: {}
-}) {
+type LabelErrorProps = {
+  hasError: boolean
+  errorMessage: string
+}
+
+export function LabelError({ errorMessage, hasError = true }: LabelErrorProps) {
   if (hasError) {
     return (
       <label>
-        <span className="label-text-alt text-red-600">{msg}</span>
+        <span className="label-text-alt text-red-600">{errorMessage}</span>
       </label>
     )
   } else {

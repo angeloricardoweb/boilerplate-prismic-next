@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.12",
+    "@hookform/resolvers": "^3.1.0",
     "@prismicio/client": "^6.7.3",
     "@prismicio/helpers": "^2.3.9",
     "@prismicio/next": "^1.0.3",
@@ -20,6 +21,7 @@
     "@prismicio/slice-simulator-react": "^0.2.3",
     "@types/react-input-mask": "^3.0.2",
     "axios": "^0.27.2",
+    "daisyui": "^2.51.6",
     "js-cookie": "^3.0.1",
     "next": "12.2.5",
     "node-sass": "^7.0.1",
