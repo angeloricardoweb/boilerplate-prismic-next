@@ -15,16 +15,9 @@ import Footer from '../components/Footer'
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GlobalContextProvider>
-      <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-        {/* <PrismicPreview repositoryName={repositoryName}> */}
-        <Header />
+
         <Component {...pageProps} />
-        <Footer />
-        <BoxCookies />
-        <Modals />
-        <ToasterComponent />
-        {/* </PrismicPreview> */}
-      </PrismicProvider>
+      
     </GlobalContextProvider>
   )
 }
