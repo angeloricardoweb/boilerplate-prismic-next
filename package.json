@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.12",
+    "@hookform/resolvers": "^3.1.0",
     "@prismicio/client": "^6.7.3",
     "@prismicio/helpers": "^2.3.9",
     "@prismicio/next": "^1.0.3",
