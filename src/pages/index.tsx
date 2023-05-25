@@ -1,6 +1,6 @@
 import type { NextPage, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
-import { client } from '../services/prismicClient'
+import { client } from 'services/prismicClient'
 import useSWR from 'swr'
 
 // type inferedTypes = InferGetStaticPropsType<typeof getStaticProps>

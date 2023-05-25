@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import TopBar from './TopBar'
-import NavLinks, { navLinks } from './NavLinks'
 import { useWindowScroll } from 'react-use'
 import Link from 'next/link'
-import Container from '../Partials/Container'
+import Container from 'components/Partials/Container'
+import NavLinks from './NavLinks'
 
 export function Header() {
   const { y } = useWindowScroll()
