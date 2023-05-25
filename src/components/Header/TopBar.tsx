@@ -1,4 +1,4 @@
-import Container from 'components/Partials/Container'
+import Container from "../Partials/Container";
 
 export default function TopBar() {
   return (
