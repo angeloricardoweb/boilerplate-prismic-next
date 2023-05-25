@@ -2,16 +2,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-p,
-span,
-strong,
-small {
-  @apply text-white;
-}
-
-h2 {
-  @apply text-blue-200 font-light text-3xl;
-}
 
 @media (max-width: 1080px) {
   html {

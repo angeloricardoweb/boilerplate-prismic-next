@@ -27,9 +27,7 @@ export function TextFormPassword({
         minLength={6}
         className="input-text"
         style={errors[name] && { border: '1px solid red' }}
-        {...register(name, {
-          required: { message: 'Campo obrigatório', value: required },
-        })}
+        {...register(name)}
       />
       <span
         className="cursor-pointer absolute right-2 top-1/2"

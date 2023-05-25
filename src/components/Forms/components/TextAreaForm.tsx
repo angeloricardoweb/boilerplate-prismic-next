@@ -1,7 +1,7 @@
 import React from 'react'
 import { LabelError } from './LabelError'
 
-export function TextForm({
+export function TextAreaForm({
   register,
   errors,
   name,
@@ -9,6 +9,7 @@ export function TextForm({
   required = false,
   disabled = false,
   placeholder = ' ',
+  rows = 3,
 }: {
   register: any
   errors: any
@@ -17,18 +18,21 @@ export function TextForm({
   required?: boolean
   disabled?: boolean
   placeholder?: string
+  rows?: number
 }) {
   return (
     <div>
       <label htmlFor={name} className="label">
         {label}
       </label>
-      <input
-        type="text"
+      <textarea
+        rows={rows}
         id={name}
         placeholder={placeholder}
         style={errors[name] && { border: '1px solid red' }}
-        {...register(name)}
+        {...register(name, {
+          required: { message: 'Campo obrigatório', value: required },
+        })}
         className="input-text"
         disabled={disabled}
       />

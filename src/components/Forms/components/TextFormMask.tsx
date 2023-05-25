@@ -28,6 +28,7 @@ export function TextFormMask({
       <InputMask
         mask={mask}
         type="text"
+        alwaysShowMask={false}
         placeholder={placeholder}
         style={errors[name] && { border: '1px solid red' }}
         {...register(name, {

@@ -1,14 +1,13 @@
 import React from 'react'
 import { LabelError } from './LabelError'
 
-export function TextForm({
+export function DateForm({
   register,
   errors,
   name,
   label,
   required = false,
   disabled = false,
-  placeholder = ' ',
 }: {
   register: any
   errors: any
@@ -16,7 +15,6 @@ export function TextForm({
   label: string
   required?: boolean
   disabled?: boolean
-  placeholder?: string
 }) {
   return (
     <div>
@@ -24,11 +22,12 @@ export function TextForm({
         {label}
       </label>
       <input
-        type="text"
+        type="date"
         id={name}
-        placeholder={placeholder}
         style={errors[name] && { border: '1px solid red' }}
-        {...register(name)}
+        {...register(name, {
+          required: { message: 'Campo obrigatório', value: required },
+        })}
         className="input-text"
         disabled={disabled}
       />

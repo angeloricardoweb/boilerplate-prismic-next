@@ -8,10 +8,13 @@ interface SelectInputProps {
   label: string
   required?: boolean
   disabled?: boolean
-  options: any[]
+  options: {
+    value: string
+    label: string
+  }[]
 }
 
-export default function SelectInput(props: SelectInputProps) {
+export function SelectInput(props: SelectInputProps) {
   return (
     <div>
       <Label label={props.label} name={props.name} />
