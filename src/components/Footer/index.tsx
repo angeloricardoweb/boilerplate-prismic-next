@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer>
       <Container>
-        <div className="flex justify-between gap-10">
+        <div className="flex justify-between flex-wrap gap-10">
           <div className="w-[320px]">
             <img src="/img/logo.png" alt="Logo" />
 
@@ -21,7 +21,7 @@ export default function Footer() {
             </small>
           </div>
 
-          <div className="flex gap-10">
+          <div className="flex gap-10 flex-wrap">
             <div className="flex flex-col w-[320px]">
               <strong>Encontre nosso escritório</strong>
               <small>

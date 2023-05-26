@@ -11,20 +11,25 @@ import 'swiper/css/bundle'
 import '../styles/index.scss'
 import { Header } from '../components/Header'
 import Footer from '../components/Footer'
+import useMenuHamburguerStore from '../stores/useMenuHamburguerStore'
+import { MenuHamburguer } from '../components/Partials/MenuHamburguer'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <GlobalContextProvider>
-      <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-        {/* <PrismicPreview repositoryName={repositoryName}> */}
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-        <BoxCookies />
-        <Modals />
-        <ToasterComponent />
-        {/* </PrismicPreview> */}
-      </PrismicProvider>
-    </GlobalContextProvider>
+    <>
+      <GlobalContextProvider>
+        <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
+          {/* <PrismicPreview repositoryName={repositoryName}> */}
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+          <BoxCookies />
+          <Modals />
+          <ToasterComponent />
+          {/* </PrismicPreview> */}
+        </PrismicProvider>
+      </GlobalContextProvider>
+      <MenuHamburguer />
+    </>
   )
 }
