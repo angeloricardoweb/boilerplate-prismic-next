@@ -24,6 +24,7 @@
     "axios": "^0.27.2",
     "js-cookie": "^3.0.1",
     "next": "12.2.5",
+    "next-seo": "^6.0.0",
     "nextjs-cors": "^2.1.2",
     "node-sass": "^7.0.1",
     "react": "18.2.0",
