@@ -1,5 +1,4 @@
 import { create } from 'zustand'
-import { IStaffStore, StaffType } from '../protocols'
 
 interface IMenuHamburguerStore {
   showMenuHamburguer: boolean
