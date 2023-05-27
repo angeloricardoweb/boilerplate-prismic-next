@@ -16,7 +16,7 @@ export function MenuHamburguer() {
 
   return (
     <div
-      className={`fixed z-50 w-[90%] md:hidden h-full bg-white top-0 right-0 flex items-center justify-center shadow-2xl ${
+      className={`fixed z-50 w-[90%] md:hidden h-full bg-white top-0 flex items-center justify-center shadow-2xl ${
         showMenuHamburguer ? 'right-0' : '-right-[700px]'
       } transition-all`}
     >
