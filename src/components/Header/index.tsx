@@ -6,10 +6,18 @@ import Link from 'next/link'
 import Container from '../Partials/Container'
 import { Icon } from '@iconify/react'
 import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
+import { useEffect } from 'react'
 
 export function Header() {
   const { y } = useWindowScroll()
   const { setShowMenuHamburguer } = useMenuHamburguerStore()
+
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : ''
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [pathname])
+
   return (
     <header
       className={`fixed z-50 w-full shadow-xl backdrop-blur transition-all top-0 py-3 ${
