@@ -37,14 +37,10 @@ export default function ContentRichText({ data }: { data: [] | undefined }) {
         list: ({ children }) => <ul>{children}</ul>,
         oList: ({ children }) => <ol>{children}</ol>,
         image: ({ node }) => (
-          <img
-            src={node.url}
-            alt={node.alt as ''}
-            className="mt-5 h-96 w-full object-cover"
-          />
+          <img src={node.url} alt={node.alt as ''} className="my-5" />
         ),
         hyperlink: ({ children, node }) => (
-          <a href={node.data.url} target="_blank" rel="noreferrer" >
+          <a href={node.data.url} target="_blank" rel="noreferrer">
             {children}
           </a>
         ),
