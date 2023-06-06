@@ -23,6 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const start = () => {
       console.log('start')
+      window.scrollTo(0, 0)
       setLoading(true)
     }
     const end = () => {
