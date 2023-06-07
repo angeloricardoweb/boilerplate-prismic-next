@@ -16,6 +16,7 @@ import '../styles/index.scss'
 import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
 import Router from 'next/router'
+import { useAuth } from '../hooks/useAuth'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)
@@ -39,6 +40,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       Router.events.off('routeChangeError', end)
     }
   }, [])
+
+  // * Verifica se o token é valido
+  // const { checkToken } = useAuth()
+  // useEffect(() => {
+  //   checkToken()
+  // }, [])
 
   return (
     <>
