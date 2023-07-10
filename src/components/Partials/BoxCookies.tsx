@@ -29,7 +29,7 @@ export const BoxCookies = () => {
   }, [])
 
   return (
-    <div className='absolute bg-zinc-200 w-full border-t-4 border-cyan-400 transition-all bottom-0'
+    <div className='fixed bg-zinc-200 w-full border-t-4 border-cyan-400 transition-all bottom-0'
       style={{
         display: openBoxCookie ? 'block' : 'none',
       }}
