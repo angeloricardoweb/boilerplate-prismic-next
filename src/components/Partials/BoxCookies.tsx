@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import privacyPolicyModalStore from '../../stores/modals/privacyPolicyModalStore';
 import ButtonOutline from '../Buttons/ButtonOutline';
-import ButtonPrimary from '../Buttons/ButtonPrimary';
+import ButtonSolid from '../Buttons/ButtonSolid';
 
 export const BoxCookies = () => {
   const { setModalState } = privacyPolicyModalStore()
@@ -50,10 +50,10 @@ export const BoxCookies = () => {
             onClick={() => setModalState(true)}>
             Política de Privacidade
           </ButtonOutline>
-          <ButtonPrimary
+          <ButtonSolid
             onClick={setCookie}>
             Aceitar
-          </ButtonPrimary>
+          </ButtonSolid>
         </div>
       </div>
     </div>

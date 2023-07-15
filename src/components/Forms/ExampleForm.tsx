@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { TextForm } from './components/TextForm'
-import ButtonPrimary from '../Buttons/ButtonPrimary'
+import ButtonSolid from '../Buttons/ButtonSolid'
 import { TextFormPassword } from './components/TextFormPassword'
 import { DateForm } from './components/DateForm'
 import { SelectInput } from './components/SelectInput'
@@ -121,7 +121,7 @@ export function ExampleForm() {
           name={'nascimento'}
           label={'Data de Nascimento'}
         />
-        <ButtonPrimary type="submit">Enviar</ButtonPrimary>
+        <ButtonSolid type="submit">Enviar</ButtonSolid>
       </form>
     </div>
   )

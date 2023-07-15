@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
-import { BannerDTO } from '../../protocols/prismic/dtos'
 
-export default function SwiperHero({ banners }: { banners: BannerDTO[] }) {
+export default function SwiperHero({ banners }: { banners: any }) {
   return (
     <Swiper
       pagination={true}

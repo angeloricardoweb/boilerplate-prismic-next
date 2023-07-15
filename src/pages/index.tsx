@@ -2,6 +2,8 @@ import type { NextPage, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { client } from '../services/prismicClient'
 import useSWR from 'swr'
+import ButtonSolid from '../components/Buttons/ButtonSolid'
+import ButtonOutline from '../components/Buttons/ButtonOutline'
 
 // type inferedTypes = InferGetStaticPropsType<typeof getStaticProps>
 
@@ -19,6 +21,8 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex items-center justify-center flex-col gap-5 pt-4 h-screen">
         <h1>Front-end Next 12 Template</h1>
+        <ButtonSolid>Button Solid</ButtonSolid>
+        <ButtonOutline>Button Outline</ButtonOutline>
       </main>
     </div>
   )

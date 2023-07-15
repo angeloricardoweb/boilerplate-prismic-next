@@ -1,6 +1,6 @@
 import { Dialog } from '@headlessui/react'
 import privacyPolicyModalStore from '../../stores/modals/privacyPolicyModalStore'
-import ButtonPrimary from '../Buttons/ButtonPrimary'
+import ButtonSolid from '../Buttons/ButtonSolid'
 
 export function PrivacyPolicyModal() {
   const { modalState, setModalState } = privacyPolicyModalStore()
@@ -19,7 +19,7 @@ export function PrivacyPolicyModal() {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, soluta saepe, nobis enim consequuntur quisquam animi amet aliquid non libero a nulla repudiandae suscipit quibusdam velit expedita beatae alias dolorem.
         </p>
         <div className='flex gap-3'>
-          <ButtonPrimary onClick={() => setModalState(false)}>Fechar</ButtonPrimary>
+          <ButtonSolid onClick={() => setModalState(false)}>Fechar</ButtonSolid>
         </div>
       </Dialog.Panel>
     </Dialog>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
-export default function ButtonOutline({
+export default function ButtonSolid({
   className,
   type,
   disabled,
@@ -16,7 +16,7 @@ export default function ButtonOutline({
 }) {
   return (
     <button
-      className={twMerge('btn btn-outline', className)}
+      className={twMerge('btn btn-solid', className)}
       type={type}
       disabled={disabled}
       onClick={onClick}
