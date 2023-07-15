@@ -1,8 +1,5 @@
-// import { PrismicPreview } from '@prismicio/next'
-import { PrismicProvider } from '@prismicio/react'
 import type { AppProps } from 'next/app'
 import Link from 'next/link'
-// import { repositoryName } from '../../prismicio'
 import Modals from '../components/Modals'
 import { BoxCookies } from '../components/Partials/BoxCookies'
 import { ToasterComponent } from '../components/Partials/ToasterComponent'
@@ -75,8 +72,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <GlobalContextProvider>
-        <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-          {/* <PrismicPreview repositoryName={repositoryName}> */}
+
           <Header />
           {loading ? (
             <div className="h-screen flex items-center justify-center">
@@ -89,8 +85,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <BoxCookies />
           <Modals />
           <ToasterComponent />
-          {/* </PrismicPreview> */}
-        </PrismicProvider>
+
       </GlobalContextProvider>
       <MenuHamburguer />
     </>

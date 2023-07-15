@@ -1,16 +1,9 @@
 import type { NextPage, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
-import { client } from '../services/prismicClient'
-import useSWR from 'swr'
 import ButtonSolid from '../components/Buttons/ButtonSolid'
 import ButtonOutline from '../components/Buttons/ButtonOutline'
 
-// type inferedTypes = InferGetStaticPropsType<typeof getStaticProps>
-
 const Home: NextPage = () => {
-  const { data: bannersHome } = useSWR('banners_da_home', () =>
-    client.getSingle('banners_da_home')
-  )
 
   return (
     <div>
@@ -27,5 +20,4 @@ const Home: NextPage = () => {
     </div>
   )
 }
-
 export default Home
