@@ -8,6 +8,10 @@ export default function useFetch(url: string) {
 
   const [isLoading, setIsLoading] = useState(true)
 
+  function refreshData() {
+    getData()
+  }
+
   async function getData() {
     setIsLoading(true)
     try {
@@ -26,5 +30,6 @@ export default function useFetch(url: string) {
   return {
     data,
     isLoading,
+    refreshData,
   }
 }
