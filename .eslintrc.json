@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // Outras regras personalizadas que você queira adicionar
+    // ...
+    // Desabilitar a regra @next/next/no-img-element globalmente
+    "@next/next/no-img-element": "off"
+  }
 }
