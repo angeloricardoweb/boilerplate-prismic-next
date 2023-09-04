@@ -16,7 +16,7 @@ import '../styles/index.scss'
 import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
 import Router from 'next/router'
-import { useAuth } from '../hooks/useAuth'
+import Head from 'next/head'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)
@@ -49,6 +49,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+        />
+      </Head>
       <DefaultSeo
         title="_____SiteName_____"
         description="___SiteDescription___    "
