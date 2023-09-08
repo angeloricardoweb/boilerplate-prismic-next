@@ -72,10 +72,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
               type: 'image/png',
             },
           ],
-          siteName: 'gilmarcasepatentes.com.br',
+          siteName: 'urloficialdosite.com.br',
         }}
         twitter={{
-          handle: '@GilmarcaEPatentes',
+          handle: '@redesocialaqui',
           site: '@site',
           cardType: 'summary_large_image',
         }}
