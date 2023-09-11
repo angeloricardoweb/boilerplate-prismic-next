@@ -17,6 +17,7 @@ import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
 import Router from 'next/router'
 import Head from 'next/head'
+import Script from 'next/script'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)
@@ -79,6 +80,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           site: '@site',
           cardType: 'summary_large_image',
         }}
+      />
+      <Script
+        src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"
+        crossOrigin="anonymous"
       />
       <GlobalContextProvider>
         <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
