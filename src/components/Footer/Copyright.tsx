@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import Container from '../Partials/Container'
+import {Container} from '../Partials/Container'
 
 export function Copyright() {
   return (

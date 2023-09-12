@@ -2,7 +2,7 @@
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
 import { navLinks } from '../Header/NavLinks'
-import Container from '../Partials/Container'
+import {Container} from '../Partials/Container'
 import { Copyright } from './Copyright'
 
 export default function Footer() {
