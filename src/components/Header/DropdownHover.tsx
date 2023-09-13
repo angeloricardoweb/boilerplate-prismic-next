@@ -35,10 +35,12 @@ export function DropdownHover({
         >
           <path d="M68.5 0L136.483 62.25H0.517006L68.5 0Z" fill="white" />
         </svg>
-        <div className="group-hover:block hidden absolute bg-white z-10 min-w-[160px] rounded-md py-2 shadow-2xl translate-x-1/2 right-1/2 ">
+        <div className="p-5 group-hover:block hidden absolute bg-white z-10 min-w-[160px] rounded-md py-2 shadow-2xl translate-x-1/2 right-1/2 ">
           {links.map((link: any, index: any) => (
             <Link href={link.href} passHref key={index}>
-              <a className="block py-1 font-bold text-blue-400">{link.label}</a>
+              <a className="block py-1 text-zinc-500 hover:underline">
+                {link.label}
+              </a>
             </Link>
           ))}
         </div>
