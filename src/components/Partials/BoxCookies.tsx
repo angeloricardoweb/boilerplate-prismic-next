@@ -1,22 +1,23 @@
-import { useEffect, useState } from 'react';
-import Cookies from 'js-cookie';
-import privacyPolicyModalStore from '../../stores/modals/privacyPolicyModalStore';
-import ButtonOutline from '../Buttons/ButtonOutline';
-import ButtonSolid from '../Buttons/ButtonSolid';
+import { useEffect, useState } from 'react'
+import Cookies from 'js-cookie'
+import privacyPolicyModalStore from '../../stores/modals/privacyPolicyModalStore'
+import ButtonOutline from '../Buttons/ButtonOutline'
+import ButtonSolid from '../Buttons/ButtonSolid'
+import { Button } from '../Buttons/Button'
 
 export const BoxCookies = () => {
   const { setModalState } = privacyPolicyModalStore()
-  const [openBoxCookie, setOpenBoxCookie] = useState(true);
+  const [openBoxCookie, setOpenBoxCookie] = useState(true)
 
   function setCookie() {
-    Cookies.set('user-accept-cookies', "hasCookie", {
+    Cookies.set('user-accept-cookies', 'hasCookie', {
       expires: 31557600,
-    });
+    })
     setOpenBoxCookie(false)
   }
 
   function checkCookie() {
-    const cookie = Cookies.get('user-accept-cookies');
+    const cookie = Cookies.get('user-accept-cookies')
     if (!cookie) {
       setOpenBoxCookie(true)
     } else {
@@ -29,7 +30,8 @@ export const BoxCookies = () => {
   }, [])
 
   return (
-    <div className='fixed bg-zinc-200 w-full border-t-4 border-cyan-400 transition-all bottom-0'
+    <div
+      className="fixed bottom-4 left-[50%] z-50 max-w-full -translate-x-1/2 overflow-hidden rounded-xl border bg-zinc-500 p-5"
       style={{
         display: openBoxCookie ? 'block' : 'none',
       }}
@@ -41,22 +43,19 @@ export const BoxCookies = () => {
           </h4>
           <p className="my-4 md:my-2">
             Nós armazenamos dados temporariamente para melhorar a sua
-            experiência de navegação e recomendar conteúdo de seu interesse.
-            Ao utilizar nossos serviços, você concorda com tal monitoramento.
+            experiência de navegação e recomendar conteúdo de seu interesse. Ao
+            utilizar nossos serviços, você concorda com tal monitoramento.
           </p>
         </div>
         <div className="flex justify-between items-center">
-          <ButtonOutline
-            onClick={() => setModalState(true)}>
+          <ButtonOutline onClick={() => setModalState(true)}>
             Política de Privacidade
           </ButtonOutline>
-          <ButtonSolid
-            onClick={setCookie}>
+          <Button variant="primaryViolet" onClick={setCookie}>
             Aceitar
-          </ButtonSolid>
+          </Button>
         </div>
       </div>
     </div>
-  );
-};
-
+  )
+}
