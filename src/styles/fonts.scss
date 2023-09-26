@@ -22,3 +22,36 @@ textarea,
 button {
   font-family: 'Roboto', sans-serif;
 }
+
+// example to external fonts
+@font-face {
+  font-family: 'BD Colonius';
+  src: local('BD Colonius'), url('../fonts/BD Colonius.otf') format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'GaramondPremrPro';
+  src: local('GaramondPremrPro'), url('../fonts/GaramondPremrPro.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Garamond';
+  src: local('Garamond'), url('../fonts/Garamond.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Forma DJR Display';
+  src: local('Forma DJR Display'),
+    url('../fonts/FormaDJRBanner-Regular-Testing.ttf') format('woff');
+  font-weight: normal;
+}
+
+.font-colonius {
+  font-family: 'BD Colonius';
+}
+
+// * {
+//   font-family: 'GaramondPremrPro', serif;
+// }
