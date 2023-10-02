@@ -8,7 +8,6 @@ import { TextFormPassword } from './components/TextFormPassword'
 import { DateForm } from './components/DateForm'
 import { SelectInput } from './components/SelectInput'
 import { TextAreaForm } from './components/TextAreaForm'
-import { TextFormMask } from './components/TextFormMask'
 import { convertToPhoneNumber } from '../../utils/convertToPhoneNumber'
 import { Label } from './components/Label'
 
