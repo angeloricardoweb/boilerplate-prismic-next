@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 import Subheader from '../components/Header/Subheader'
 import Layout from '../components/Layouts/Layout'
-import Container from '../components/Partials/Container'
+import { Container } from '../components/Partials/Container'
 
 const SobreNos: NextPage = () => {
   return (

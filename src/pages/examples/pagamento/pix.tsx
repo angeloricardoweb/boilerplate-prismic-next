@@ -3,7 +3,7 @@ import { toast } from 'react-hot-toast'
 import { Icon } from '@iconify/react'
 import { api } from '../../../services/axios'
 import { Loading } from '../../../components/Partials/Loading'
-import Container from '../../../components/Partials/Container'
+import { Container } from '../../../components/Partials/Container'
 import { BackButton } from '../../../components/Partials/BackButton'
 
 export default function Pix() {
