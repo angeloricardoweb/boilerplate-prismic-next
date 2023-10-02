@@ -2,16 +2,18 @@
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
 import { navLinks } from '../Header/NavLinks'
-import {Container} from '../Partials/Container'
+import { Container } from '../Partials/Container'
 import { Copyright } from './Copyright'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="border-t pt-5">
       <Container>
         <div className="flex justify-between flex-wrap gap-10">
           <div className="w-[320px]">
-            <img src="/img/logo.png" alt="Logo" />
+            <div className="bg-black w-fit rounded-full flex items-center justify-center p-1 ">
+              <img src="/img/logo.png" alt="Logo" className="w-20" />
+            </div>
 
             <small className="mt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
