@@ -10,7 +10,7 @@ type Props = {
     | 'outlinedWhite';
   color?: string;
   disabled?: boolean;
-  onClick?: Function;
+  onClick?: any;
   type?: 'button' | 'submit' | 'reset';
   full?: boolean;
 };
