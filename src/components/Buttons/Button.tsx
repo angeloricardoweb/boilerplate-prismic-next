@@ -8,6 +8,7 @@ type Props = {
     | 'primaryPink'
     | 'secondary'
     | 'outlinedWhite'
+    | 'outlinedBlack'
   color?: string
   disabled?: boolean
   onClick?: any
@@ -27,6 +28,7 @@ export function Button({
   const primaryViolet = 'bg-brand-violet text-white'
   const primaryPink = 'bg-brand-pink text-white'
   const outlinedWhite = 'bg-transparent border border-white text-white'
+  const outlinedBlack = 'bg-transparent border border-black text-black'
 
   return (
     <button
@@ -35,6 +37,7 @@ export function Button({
         ${variant === 'primaryViolet' && primaryViolet}
         ${variant === 'primaryPink' && primaryPink}
         ${variant === 'outlinedWhite' && outlinedWhite}
+        ${variant === 'outlinedBlack' && outlinedBlack}
         ${full ? 'w-full' : 'w-fit'}
       `}
       onClick={onClick}

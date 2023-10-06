@@ -20,8 +20,9 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex items-center justify-center flex-col gap-5 pt-4 h-screen">
         <h1>Front-end Next 12 Template</h1>
-        <Button variant="primaryGreen">Button Solid</Button>
-        <Button variant="outlinedWhite">Button Outline</Button>
+
+        <Button variant="primaryGreen">Button Green</Button>
+        <Button variant="outlinedBlack">Button Outline</Button>
       </main>
     </div>
   )
