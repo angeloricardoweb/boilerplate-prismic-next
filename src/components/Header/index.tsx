@@ -3,7 +3,7 @@ import TopBar from './TopBar'
 import NavLinks, { navLinks } from './NavLinks'
 import { useWindowScroll } from 'react-use'
 import Link from 'next/link'
-import {Container} from '../Partials/Container'
+import { Container } from '../Partials/Container'
 import { Icon } from '@iconify/react'
 import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
 import { useEffect } from 'react'
@@ -20,12 +20,11 @@ export function Header() {
 
   return (
     <header
-      className={`fixed z-50 w-full shadow-xl backdrop-blur transition-all top-0 py-3 ${
+      className={`sticky top-0 z-50 w-full shadow-xl backdrop-blur transition-all ${
         y > 0 ? 'bg-black/70' : 'bg-black'
       } `}
     >
-      {/* {y > 0 ? null : <TopBar />} */}
-
+      <TopBar />
       <Container>
         <div className="flex items-center justify-between">
           <Link href="/">

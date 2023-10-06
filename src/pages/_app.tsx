@@ -73,7 +73,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
               type: 'image/png',
             },
           ],
-          siteName: 'urloficialdosite.com.br',
+          siteName: 'siteurl.com.br',
         }}
         twitter={{
           handle: '@redesocialaqui',
@@ -86,22 +86,18 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         crossOrigin="anonymous"
       />
       <GlobalContextProvider>
-        <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-          {/* <PrismicPreview repositoryName={repositoryName}> */}
-          <Header />
-          {loading ? (
-            <div className="h-screen flex items-center justify-center">
-              <Icon icon="mdi:loading" className="text-5xl animate-spin" />
-            </div>
-          ) : (
-            <Component {...pageProps} />
-          )}
-          <Footer />
-          <BoxCookies />
-          <Modals />
-          <ToasterComponent />
-          {/* </PrismicPreview> */}
-        </PrismicProvider>
+        <Header />
+        {loading ? (
+          <div className="h-screen flex items-center justify-center">
+            <Icon icon="mdi:loading" className="text-5xl animate-spin" />
+          </div>
+        ) : (
+          <Component {...pageProps} />
+        )}
+        <Footer />
+        <BoxCookies />
+        <Modals />
+        <ToasterComponent />
       </GlobalContextProvider>
       <MenuHamburguer />
     </>

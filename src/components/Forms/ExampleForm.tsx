@@ -3,13 +3,13 @@ import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { TextForm } from './components/TextForm'
-import ButtonSolid from '../Buttons/ButtonSolid'
 import { TextFormPassword } from './components/TextFormPassword'
 import { DateForm } from './components/DateForm'
 import { SelectInput } from './components/SelectInput'
 import { TextAreaForm } from './components/TextAreaForm'
 import { convertToPhoneNumber } from '../../utils/convertToPhoneNumber'
 import { Label } from './components/Label'
+import { Button } from '../Buttons/Button'
 
 const registerSchema = z
   .object({
@@ -120,7 +120,9 @@ export function ExampleForm() {
           name={'nascimento'}
           label={'Data de Nascimento'}
         />
-        <ButtonSolid type="submit">Enviar</ButtonSolid>
+        <Button variant="primaryGreen" type="submit">
+          Enviar
+        </Button>
       </form>
     </div>
   )

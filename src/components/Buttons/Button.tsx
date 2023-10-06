@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 
 type Props = {
-  children: React.ReactNode;
+  children: React.ReactNode
   variant:
     | 'primaryGreen'
     | 'primaryViolet'
     | 'primaryPink'
     | 'secondary'
-    | 'outlinedWhite';
-  color?: string;
-  disabled?: boolean;
-  onClick?: any;
-  type?: 'button' | 'submit' | 'reset';
-  full?: boolean;
-};
+    | 'outlinedWhite'
+  color?: string
+  disabled?: boolean
+  onClick?: any
+  type?: 'button' | 'submit' | 'reset'
+  full?: boolean
+}
 
 export function Button({
   children,
@@ -23,10 +23,10 @@ export function Button({
   type = 'button',
   full = false,
 }: Props) {
-  const primaryGreen = 'bg-brand-green text-white';
-  const primaryViolet = 'bg-brand-violet text-white';
-  const primaryPink = 'bg-brand-pink text-white';
-  const outlinedWhite = 'bg-transparent border border-white text-white';
+  const primaryGreen = 'bg-brand-green text-white'
+  const primaryViolet = 'bg-brand-violet text-white'
+  const primaryPink = 'bg-brand-pink text-white'
+  const outlinedWhite = 'bg-transparent border border-white text-white'
 
   return (
     <button
@@ -43,5 +43,5 @@ export function Button({
     >
       {children}
     </button>
-  );
+  )
 }

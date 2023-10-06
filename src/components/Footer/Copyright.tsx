@@ -4,7 +4,7 @@ import {Container} from '../Partials/Container'
 
 export function Copyright() {
   return (
-    <div className="py-4 border-t border-t-zinc-600 mt-10">
+    <div className="py-4 border-t border-t-zinc-600 mt-10 bg-black">
       <Container>
         <div className="flex items-center justify-center md:justify-between flex-col md:flex-row">
           <p className="text-white text-sm m-0">

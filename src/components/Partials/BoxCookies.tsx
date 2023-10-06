@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
 import privacyPolicyModalStore from '../../stores/modals/privacyPolicyModalStore'
-import ButtonOutline from '../Buttons/ButtonOutline'
-import ButtonSolid from '../Buttons/ButtonSolid'
 import { Button } from '../Buttons/Button'
 
 export const BoxCookies = () => {
@@ -48,9 +46,9 @@ export const BoxCookies = () => {
           </p>
         </div>
         <div className="flex justify-between items-center">
-          <ButtonOutline onClick={() => setModalState(true)}>
+          <Button variant="primaryGreen" onClick={() => setModalState(true)}>
             Política de Privacidade
-          </ButtonOutline>
+          </Button>
           <Button variant="primaryViolet" onClick={setCookie}>
             Aceitar
           </Button>
