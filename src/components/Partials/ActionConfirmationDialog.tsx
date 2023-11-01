@@ -58,7 +58,7 @@ export const ActionConfirmationDialog = (props: Props) => {
           <button className="group grid w-full place-items-center rounded-xl bg-zinc-800 py-3">
             <Icon
               icon="mdi:delete-outline"
-              className="text-2xl text-white group-hover:text-brand-pink"
+              className="text-2xl text-white"
             />
           </button>
         }
