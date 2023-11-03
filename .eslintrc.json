@@ -4,6 +4,7 @@
     // Outras regras personalizadas que você queira adicionar
     // ...
     // Desabilitar a regra @next/next/no-img-element globalmente
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "@next/next/no-html-link-for-pages": "off"
   }
 }
