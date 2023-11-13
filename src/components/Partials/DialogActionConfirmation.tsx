@@ -54,13 +54,13 @@ export const DialogActionConfirmation = (props: Props) => {
         title="Tem certeza que deseja deletar este artigo?"
         description="Ao deletar este artigo, ele será removido permanentemente do sistema."
         actionOnAccept={() => alert('Deletar')}
-        children={
-          <button className="group grid w-full place-items-center rounded-xl bg-zinc-800 py-3">
-            <Icon
-              icon="mdi:delete-outline"
-              className="text-2xl text-white"
-            />
-          </button>
-        }
-      /> */
+      
+      >
+ <button className="group grid w-full place-items-center rounded-xl bg-zinc-800 py-3">
+    <Icon
+      icon="mdi:delete-outline"
+      className="text-2xl text-white"
+    />
+  </button>
+</DialogActionConfirmation> */
 }
