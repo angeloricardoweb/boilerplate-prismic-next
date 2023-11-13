@@ -8,7 +8,7 @@ type Props = {
   children: React.ReactNode
 }
 
-export const ActionConfirmationDialog = (props: Props) => {
+export const DialogActionConfirmation = (props: Props) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -50,7 +50,7 @@ export const ActionConfirmationDialog = (props: Props) => {
 }
 
 {
-  /* <ActionConfirmationDialog
+  /* <DialogActionConfirmation
         title="Tem certeza que deseja deletar este artigo?"
         description="Ao deletar este artigo, ele será removido permanentemente do sistema."
         actionOnAccept={() => alert('Deletar')}

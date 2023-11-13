@@ -2,18 +2,18 @@ import React from 'react'
 import { LabelError } from './LabelError'
 
 export function TextForm({
+  label,
+  name,
   register,
   errors,
-  name,
-  label,
   required = false,
   disabled = false,
   placeholder = ' ',
 }: {
+  label: string
+  name: string
   register: any
   errors: any
-  name: string
-  label: string
   required?: boolean
   disabled?: boolean
   placeholder?: string
