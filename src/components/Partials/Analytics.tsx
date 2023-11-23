@@ -4,7 +4,7 @@ const Analytics = () => (
   <>
     <script
       async
-      src={`https://www.googletagmanager.com/gtag/js?id=G-P9V9XQFQJ3`}
+      src={`https://www.googletagmanager.com/gtag/js?id=G-______`}
     />
     <script
       dangerouslySetInnerHTML={{
@@ -12,7 +12,7 @@ const Analytics = () => (
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-P9V9XQFQJ3', {
+            gtag('config', 'G-______', {
               page_path: window.location.pathname,
             });
           `

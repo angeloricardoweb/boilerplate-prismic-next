@@ -15,12 +15,13 @@ import 'swiper/css/bundle'
 import '../styles/index.scss'
 import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
 import Head from 'next/head'
 import Script from 'next/script'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const start = () => {
@@ -41,6 +42,20 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       Router.events.off('routeChangeError', end)
     }
   }, [])
+
+  // * Facebook Pixel
+  // useEffect(() => {
+  //   import('react-facebook-pixel')
+  //     .then((x) => x.default)
+  //     .then((ReactPixel) => {
+  //       ReactPixel.init('______') // facebookPixelId
+  //       ReactPixel.pageView()
+
+  //       router.events.on('routeChangeComplete', () => {
+  //         ReactPixel.pageView()
+  //       })
+  //     })
+  // }, [router.events])
 
   // * Verifica se o token é valido
   // const { checkToken } = useAuth()

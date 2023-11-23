@@ -6306,6 +6306,11 @@ react-easy-crop@4.6.1:
     normalize-wheel "^1.0.1"
     tslib "2.0.1"
 
+react-facebook-pixel@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-facebook-pixel/-/react-facebook-pixel-1.0.4.tgz#4760b60dc0451e345649d9710152b4b5419cf989"
+  integrity sha512-givZY8MS0v/mdbRzvcvouBo/j0TtDiu/93f4gIjJXwDDgwlf6bYUiQvb2qcqjluOOD/hIKUQHNYLNsSOnoEklg==
+
 react-hook-form@^7.34.2:
   version "7.43.2"
   resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.43.2.tgz"
