@@ -7,6 +7,7 @@ import { Container } from '../Partials/Container'
 import { Icon } from '@iconify/react'
 import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
 import { useEffect } from 'react'
+import { NavMenu } from '../Partials/NavMenu'
 
 export function Header() {
   const { y } = useWindowScroll()
@@ -20,9 +21,8 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full shadow-xl backdrop-blur transition-all ${
-        y > 0 ? 'bg-black/70' : 'bg-black'
-      } `}
+      className={`sticky top-0 z-50 w-full shadow-xl backdrop-blur transition-all ${y > 0 ? 'bg-black/70' : 'bg-black'
+        } `}
     >
       <TopBar />
       <Container>
@@ -35,9 +35,8 @@ export function Header() {
               style={{ height: y > 0 ? '3rem' : '4rem' }}
             />
           </Link>
-          <div className="md:flex gap-5 items-center hidden">
-            <NavLinks />
-          </div>
+          <NavMenu />
+          <NavLinks />
           <div
             className="md:hidden"
             onClick={() => setShowMenuHamburguer(true)}

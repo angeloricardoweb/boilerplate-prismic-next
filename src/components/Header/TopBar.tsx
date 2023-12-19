@@ -6,7 +6,7 @@ export default function TopBar() {
       <Container>
         <small className="text-white">
           Next Boilerplate
-          <strong> - 2023</strong>
+          <strong> - 2024</strong>
         </small>
       </Container>
     </div>
