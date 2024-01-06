@@ -3,6 +3,7 @@ import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
 import { navLinks } from '../Header/NavLinks'
 import { Icon } from '@iconify/react'
 import { useRouter } from 'next/router'
+import { LanguageToggle } from './LanguageToggle'
 
 export function MenuHamburguer() {
   const { setShowMenuHamburguer, showMenuHamburguer } = useMenuHamburguerStore()
@@ -16,9 +17,8 @@ export function MenuHamburguer() {
 
   return (
     <div
-      className={`fixed w-[90%] md:hidden h-full bg-[url(/img/background.png)] bg-cover bg-center bg-fixed top-0 flex items-center justify-center shadow-2xl z-[999999] bg-white/80 backdrop-blur-md ${
-        showMenuHamburguer ? 'right-0' : '-right-[700px]'
-      } transition-all`}
+      className={`fixed w-[90%] md:hidden h-full bg-[url(/img/background.png)] bg-cover bg-center bg-fixed top-0 flex items-center justify-center shadow-2xl z-[999999] bg-white/80 backdrop-blur-md ${showMenuHamburguer ? 'right-0' : '-right-[700px]'
+        } transition-all`}
     >
       <div className="w-full h-full relative">
         <Icon
@@ -40,6 +40,10 @@ export function MenuHamburguer() {
             </div>
           ))}
           <div className="bg-white py-10">
+            <div className='flex flex-col items-center justify-center pb-5'>
+              <h2>Idioma</h2>
+              <LanguageToggle />
+            </div>
             <p className="text-zinc-900 text-center text-xl">
               contato@site.com.br
             </p>
