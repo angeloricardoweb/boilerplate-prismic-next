@@ -3,12 +3,12 @@ import React from 'react'
 type Props = {
   children: React.ReactNode
   variant:
-    | 'primaryGreen'
-    | 'primaryViolet'
-    | 'primaryPink'
-    | 'secondary'
-    | 'outlinedWhite'
-    | 'outlinedBlack'
+  | 'primaryGreen'
+  | 'primaryViolet'
+  | 'primaryPink'
+  | 'secondary'
+  | 'outlinedWhite'
+  | 'outlinedBlack'
   color?: string
   disabled?: boolean
   onClick?: any
@@ -32,7 +32,7 @@ export function Button({
 
   return (
     <button
-      className={`mt-3 flex items-center justify-center gap-2 rounded-full px-4 py-2 transition-all hover:opacity-75
+      className={`mt-3 flex items-center justify-center gap-2 rounded-full px-4 py-2 transition-all hover:opacity-75 disabled:opacity-50
         ${variant === 'primaryGreen' && primaryGreen}
         ${variant === 'primaryViolet' && primaryViolet}
         ${variant === 'primaryPink' && primaryPink}
