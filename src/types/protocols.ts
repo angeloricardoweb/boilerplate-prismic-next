@@ -1,3 +1,12 @@
+export type Me = {
+  id: number
+  name: string
+  email: string
+  profile_photo_url: string
+  created_at: string
+  updated_at: string
+}
+
 export type StaffType = {
   id: string
   nome: string
