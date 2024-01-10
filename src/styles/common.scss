@@ -32,3 +32,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
