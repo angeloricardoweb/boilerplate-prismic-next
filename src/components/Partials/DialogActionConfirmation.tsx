@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
+import { Icon } from '@iconify/react'
 
 type Props = {
   actionOnAccept: any
@@ -22,6 +23,9 @@ export const DialogActionConfirmation = (props: Props) => {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/80" />
         <Dialog.Content className="fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-2xl border border-zinc-600 bg-black p-10">
+          <Dialog.Close className="absolute top-0 right-0 m-3 text-white text-2xl">
+            <Icon icon="mdi:close" />
+          </Dialog.Close>
           <h2 className="text-center text-2xl font-bold">{props.title}</h2>
           <p className="text-center mt-2 text-zinc-300">{props.description}</p>
           <div className="mt-5 grid grid-cols-2 gap-3">
