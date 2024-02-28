@@ -33,6 +33,7 @@
     "next": "12.2.5",
     "next-seo": "^6.0.0",
     "nextjs-cors": "^2.1.2",
+    "nextjs-progressbar": "^0.0.16",
     "node-sass": "^7.0.1",
     "prettier-plugin-tailwindcss": "^0.5.9",
     "react": "18.2.0",

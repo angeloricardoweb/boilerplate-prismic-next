@@ -39,3 +39,8 @@ html {
 body {
   top: 0px !important;
 }
+
+// esconde o spinner do nextjs-progressbar
+.spinner-icon {
+  display: none;
+}
