@@ -18,6 +18,7 @@ import { useEffect, useState } from 'react'
 import Router, { useRouter } from 'next/router'
 import Head from 'next/head'
 import Script from 'next/script'
+import NextNProgress from 'nextjs-progressbar';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false)
@@ -102,6 +103,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       />
       <GlobalContextProvider>
         <Header />
+        <NextNProgress height={3} color='#d3d3d3' startPosition={0.3} stopDelayMs={200}/>
         {loading ? (
           <div className="h-screen flex items-center justify-center">
             <Icon icon="mdi:loading" className="text-5xl animate-spin" />
