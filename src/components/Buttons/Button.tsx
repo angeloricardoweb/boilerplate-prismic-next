@@ -1,4 +1,5 @@
 import React from 'react'
+import { Icon } from '@iconify/react'
 
 type Props = {
   children: React.ReactNode
@@ -14,6 +15,7 @@ type Props = {
   onClick?: any
   type?: 'button' | 'submit' | 'reset'
   full?: boolean
+  isLoading?: boolean
 }
 
 export function Button({
@@ -23,6 +25,7 @@ export function Button({
   onClick,
   type = 'button',
   full = false,
+  isLoading = false,
 }: Props) {
   const primaryGreen = 'bg-brand-green text-white'
   const primaryViolet = 'bg-brand-violet text-white'
@@ -44,7 +47,9 @@ export function Button({
       disabled={disabled}
       type={type}
     >
-      {children}
+      {
+        isLoading ? <Icon icon="mingcute:loading-fill" className="text-2xl animate-spin" /> : children
+      }
     </button>
   )
 }
