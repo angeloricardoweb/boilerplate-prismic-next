@@ -1,1 +1,0 @@
-PWA Next.JS Template
