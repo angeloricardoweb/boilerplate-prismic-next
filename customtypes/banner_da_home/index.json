@@ -1,0 +1,35 @@
+{
+  "id": "banner_da_home",
+  "label": "Home",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "titulo": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Titulo"
+        }
+      },
+      "descricao": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição"
+        }
+      },
+      "banner_da_home": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 655,
+            "height": 437
+          },
+          "thumbnails": [],
+          "label": "Banner da home"
+        }
+      }
+    }
+  },
+  "status": false,
+  "format": "custom"
+}

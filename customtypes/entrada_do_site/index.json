@@ -1,0 +1,52 @@
+{
+  "id": "entrada_do_site",
+  "label": "Entrada do Site",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título"
+        }
+      },
+      "subtitulo": {
+        "type": "Text",
+        "config": {
+          "label": "Subtítulo"
+        }
+      },
+      "link_do_botao": {
+        "type": "Text",
+        "config": {
+          "label": "Link do Botão"
+        }
+      },
+      "banner": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 655,
+            "height": 437
+          },
+          "thumbnails": [],
+          "label": "Banner"
+        }
+      },
+      "titulo_do_card": {
+        "type": "Text",
+        "config": {
+          "label": "Título do card"
+        }
+      },
+      "descricao_do_card": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição do card"
+        }
+      }
+    }
+  },
+  "status": true,
+  "format": "custom"
+}

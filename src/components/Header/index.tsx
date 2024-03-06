@@ -5,9 +5,9 @@ import NavLinks from './NavLinks'
 import { useWindowScroll } from 'react-use'
 import Link from 'next/link'
 import { Container } from '../Partials/Container'
-import { Icon } from '@iconify/react'
 import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
 import { useEffect } from 'react'
+import Icon from '../Adapters/Icon'
 
 export function Header() {
   const { y } = useWindowScroll()

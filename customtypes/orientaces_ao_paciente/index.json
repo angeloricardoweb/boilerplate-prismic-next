@@ -1,0 +1,10 @@
+{
+  "id": "orientaces_ao_paciente",
+  "label": "Orientaces ao Paciente",
+  "repeatable": false,
+  "json": {
+    "Main": {}
+  },
+  "status": false,
+  "format": "custom"
+}

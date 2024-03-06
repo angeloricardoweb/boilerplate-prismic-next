@@ -1,0 +1,35 @@
+{
+  "id": "redes_sociais",
+  "label": "Redes Sociais",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "facebook": {
+        "type": "Link",
+        "config": {
+          "allowTargetBlank": true,
+          "label": "Facebook",
+          "placeholder": "link do facebook",
+          "select": null
+        }
+      },
+      "instagram": {
+        "type": "Link",
+        "config": {
+          "select": "media",
+          "label": "Instagram"
+        }
+      },
+      "whatsapp": {
+        "type": "Link",
+        "config": {
+          "label": "Whatsapp",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      }
+    }
+  },
+  "status": true,
+  "format": "custom"
+}

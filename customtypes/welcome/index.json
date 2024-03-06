@@ -1,0 +1,46 @@
+{
+  "format": "custom",
+  "id": "welcome",
+  "label": "Welcome",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "message": {
+        "type": "Text",
+        "config": {
+          "label": "message",
+          "placeholder": ""
+        }
+      },
+      "data": {
+        "type": "Text",
+        "config": {
+          "label": "data",
+          "placeholder": ""
+        }
+      },
+      "yrs": {
+        "type": "Text",
+        "config": {
+          "label": "yrs",
+          "placeholder": ""
+        }
+      },
+      "tes": {
+        "type": "Text",
+        "config": {
+          "label": "te",
+          "placeholder": ""
+        }
+      },
+      "werwer": {
+        "type": "Text",
+        "config": {
+          "label": "werwer",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

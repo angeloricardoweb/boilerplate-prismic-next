@@ -1,0 +1,19 @@
+{
+  "id": "politica_de_privacidade",
+  "label": "Politica de privacidade",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "politica_de_privacidade": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,heading2,heading3,strong,em,hyperlink,image,list-item,o-list-item",
+          "allowTargetBlank": true,
+          "label": "Politica de privacidade"
+        }
+      }
+    }
+  },
+  "status": true,
+  "format": "custom"
+}

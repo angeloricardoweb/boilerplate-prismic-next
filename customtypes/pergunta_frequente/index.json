@@ -1,0 +1,47 @@
+{
+  "id": "pergunta_frequente",
+  "label": "Perguntas Frequentes",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "descricao": {
+        "type": "Text",
+        "config": {
+          "label": "Descrição"
+        }
+      },
+      "perguntas_frequentes": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "pergunta": {
+              "type": "StructuredText",
+              "config": {
+                "single": "heading1",
+                "label": "Pergunta"
+              }
+            },
+            "resposta": {
+              "type": "Text",
+              "config": {
+                "label": "Resposta"
+              }
+            },
+            "mostrar_na_pagina_principal_": {
+              "type": "Boolean",
+              "config": {
+                "placeholder_false": "Não",
+                "placeholder_true": "Sim",
+                "default_value": false,
+                "label": "Mostrar na página principal?"
+              }
+            }
+          },
+          "label": "Perguntas Frequentes"
+        }
+      }
+    }
+  },
+  "status": true,
+  "format": "custom"
+}

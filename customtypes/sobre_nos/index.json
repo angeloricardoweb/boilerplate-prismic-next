@@ -1,0 +1,88 @@
+{
+  "id": "sobre_nos",
+  "label": "Sobre nós",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "primeira_imagem": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 535,
+            "height": 355
+          },
+          "thumbnails": [],
+          "label": "Primeira imagem"
+        }
+      },
+      "titulo": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Titulo"
+        }
+      },
+      "descricao": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item",
+          "allowTargetBlank": true,
+          "label": "Descrição"
+        }
+      },
+      "icones": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "icone": {
+              "type": "Image",
+              "config": {
+                "constraint": {
+                  "width": 59,
+                  "height": 59
+                },
+                "thumbnails": [],
+                "label": "Icone"
+              }
+            },
+            "texto": {
+              "type": "Text",
+              "config": {
+                "label": "Texto"
+              }
+            }
+          },
+          "label": "Icones"
+        }
+      },
+      "banner": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 1200,
+            "height": 320
+          },
+          "thumbnails": [],
+          "label": "Banner"
+        }
+      },
+      "titulo1": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Titulo"
+        }
+      },
+      "descricao1": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item",
+          "allowTargetBlank": true,
+          "label": "Descrição"
+        }
+      }
+    }
+  },
+  "status": true,
+  "format": "custom"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "post",
+  "label": "Post",
+  "repeatable": true,
+  "json": {
+    "Main": {
+      "tipo_de_post": {
+        "type": "Select",
+        "config": {
+          "options": ["Post", "Seus Direitos"],
+          "default_value": "Post",
+          "label": "Tipo de Post"
+        }
+      },
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título"
+        }
+      },
+      "imagem": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 380,
+            "height": 365
+          },
+          "thumbnails": [],
+          "label": "Imagem"
+        }
+      },
+      "banner": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 768,
+            "height": 366
+          },
+          "thumbnails": [],
+          "label": "Banner"
+        }
+      },
+      "conteudo": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,heading2,heading3,strong,em,hyperlink,image,list-item,o-list-item",
+          "allowTargetBlank": true,
+          "label": "Conteudo"
+        }
+      },
+      "anuncio": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 288,
+            "height": 527
+          },
+          "thumbnails": [],
+          "label": "Anúncio"
+        }
+      },
+      "link_do_anuncio": {
+        "type": "Link",
+        "config": {
+          "allowTargetBlank": true,
+          "label": "Link do anuncio",
+          "select": null
+        }
+      }
+    }
+  },
+  "status": true,
+  "format": "custom"
+}

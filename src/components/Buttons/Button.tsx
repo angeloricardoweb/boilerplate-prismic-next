@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Icon } from '@iconify/react'
+import Icon from '../Adapters/Icon'
 
 type Props = {
   children: React.ReactNode

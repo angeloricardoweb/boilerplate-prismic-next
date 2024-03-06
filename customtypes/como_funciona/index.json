@@ -1,0 +1,54 @@
+{
+  "id": "como_funciona",
+  "label": "Como Funciona",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título"
+        }
+      },
+      "subtitulo": {
+        "type": "Text",
+        "config": {
+          "label": "Subtítulo"
+        }
+      },
+      "cards": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "icone": {
+              "type": "Image",
+              "config": {
+                "constraint": {
+                  "width": 400,
+                  "height": 400
+                },
+                "thumbnails": [],
+                "label": "Ícone"
+              }
+            },
+            "titulo1": {
+              "type": "Text",
+              "config": {
+                "label": "Título"
+              }
+            },
+            "descricao": {
+              "type": "Text",
+              "config": {
+                "label": "Descrição"
+              }
+            }
+          },
+          "label": "Cards"
+        }
+      }
+    }
+  },
+  "status": true,
+  "format": "custom"
+}

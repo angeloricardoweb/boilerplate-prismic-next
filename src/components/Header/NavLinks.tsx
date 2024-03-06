@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-
-import { Icon } from '@iconify/react'
 import Link from 'next/link'
+import Icon from '../Adapters/Icon'
+
 export const navLinks = [
 
   {

@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-'use client'
-import { Icon } from '@iconify/react'
 import Link from 'next/link'
 import { navLinks } from '../Header/NavLinks'
 import { Container } from '../Partials/Container'
 import { Copyright } from './Copyright'
+import Icon from '../Adapters/Icon'
 
 export default function Footer() {
   return (
@@ -15,7 +14,6 @@ export default function Footer() {
             <div className="bg-black w-fit rounded-full flex items-center justify-center p-1 ">
               <img src="/img/logo.png" alt="Logo" className="w-20" />
             </div>
-
             <small className="mt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
               autem adipisci magnam rerum quae distinctio sequi eius ipsam
@@ -49,10 +47,10 @@ export default function Footer() {
               <strong>Siga nos</strong>
               <div className="flex gap-2">
                 <a href="/" rel="noreferrer" target="_blank">
-                  <Icon icon="mdi:facebook" className="text-white text-xl" />
+                  <Icon icon="mdi:facebook" className="text-xl" />
                 </a>
                 <a href="/" rel="noreferrer" target="_blank">
-                  <Icon icon="mdi:instagram" className="text-white text-xl" />
+                  <Icon icon="mdi:instagram" className="text-xl" />
                 </a>
               </div>
             </div>
