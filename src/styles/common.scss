@@ -1,0 +1,46 @@
+// estilos globais
+.main_container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  @media (max-width: 1199.98px) {
+    max-width: 920px;
+  }
+  @media (max-width: 991.98px) {
+    padding: 0 1rem;
+    max-width: 820px;
+  }
+}
+
+.header_container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  @media (max-width: 1199.98px) {
+    max-width: 920px;
+  }
+  @media (max-width: 991.98px) {
+    padding: 0 1rem;
+    max-width: 820px;
+  }
+}
+
+body {
+  @apply min-h-[100vh];
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+// esconde o spinner do nextjs-progressbar
+.spinner-icon {
+  display: none;
+}
