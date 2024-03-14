@@ -7,7 +7,6 @@ import { TextFormPassword } from './components/TextFormPassword'
 import { DateForm } from './components/DateForm'
 import { SelectInput } from './components/SelectInput'
 import { TextAreaForm } from './components/TextAreaForm'
-import { convertToPhoneNumber } from '../../utils/convertToPhoneNumber'
 import { Label } from './components/Label'
 import { Button } from '../Buttons/Button'
 
@@ -79,7 +78,7 @@ export function ExampleForm() {
             {...(register('telefone'),
             {
               onChange: (e) => {
-                convertToPhoneNumber(e.target.value)
+                Number(e.target.value)
               },
             })}
             className="input-text"

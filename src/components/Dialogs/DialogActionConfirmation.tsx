@@ -15,7 +15,7 @@ export const DialogActionConfirmation = (props: Props) => {
   return (
     <Dialog.Root
       open={open}
-      onOpenChange={(open) => {
+      onOpenChange={(open: any) => {
         setOpen(open)
       }}
     >

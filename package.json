@@ -10,12 +10,15 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
     "@prismicio/client": "^7.3.1",
     "@prismicio/helpers": "^2.3.9",
     "@prismicio/next": "^1.5.0",
     "@prismicio/react": "^2.7.3",
     "@prismicio/slice-simulator-react": "^0.2.3",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-dialog": "^1.0.5",
+    "@types/swiper": "^6.0.0",
     "axios": "^1.6.7",
     "js-cookie": "^3.0.5",
     "next": "14.1.2",
@@ -25,7 +28,7 @@
     "react-hot-toast": "^2.4.1",
     "react-input-mask": "^2.0.4",
     "react-use": "^17.5.0",
-    "swiper": "^11.0.7",
+    "swiper": "^9.1.0",
     "swr": "^2.2.5",
     "zod": "^3.22.4",
     "zustand": "^4.5.2"
