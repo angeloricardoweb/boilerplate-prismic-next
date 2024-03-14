@@ -1,74 +1,56 @@
 {
+  "format": "custom",
   "id": "post",
   "label": "Post",
   "repeatable": true,
+  "status": true,
   "json": {
     "Main": {
-      "tipo_de_post": {
-        "type": "Select",
+      "uid": {
         "config": {
-          "options": ["Post", "Seus Direitos"],
-          "default_value": "Post",
-          "label": "Tipo de Post"
-        }
+          "label": "UID"
+        },
+        "type": "UID"
       },
       "titulo": {
         "type": "Text",
         "config": {
-          "label": "Título"
+          "label": "Título",
+          "placeholder": ""
         }
       },
-      "imagem": {
+      "capa": {
         "type": "Image",
         "config": {
-          "constraint": {
-            "width": 380,
-            "height": 365
-          },
-          "thumbnails": [],
-          "label": "Imagem"
+          "label": "Capa",
+          "constraint": {},
+          "thumbnails": []
         }
       },
-      "banner": {
-        "type": "Image",
+      "autor": {
+        "type": "Text",
         "config": {
-          "constraint": {
-            "width": 768,
-            "height": 366
-          },
-          "thumbnails": [],
-          "label": "Banner"
+          "label": "Autor",
+          "placeholder": ""
         }
       },
-      "conteudo": {
-        "type": "StructuredText",
+      "galeria": {
+        "type": "Group",
         "config": {
-          "multi": "paragraph,heading2,heading3,strong,em,hyperlink,image,list-item,o-list-item",
-          "allowTargetBlank": true,
-          "label": "Conteudo"
-        }
-      },
-      "anuncio": {
-        "type": "Image",
-        "config": {
-          "constraint": {
-            "width": 288,
-            "height": 527
-          },
-          "thumbnails": [],
-          "label": "Anúncio"
-        }
-      },
-      "link_do_anuncio": {
-        "type": "Link",
-        "config": {
-          "allowTargetBlank": true,
-          "label": "Link do anuncio",
-          "select": null
+          "label": "Galeria",
+          "repeat": true,
+          "fields": {
+            "foto": {
+              "type": "Image",
+              "config": {
+                "label": "Foto",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
         }
       }
     }
-  },
-  "status": true,
-  "format": "custom"
+  }
 }

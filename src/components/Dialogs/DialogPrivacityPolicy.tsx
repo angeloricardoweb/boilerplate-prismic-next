@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import * as Dialog from '@radix-ui/react-dialog'
 import { Button } from '../Buttons/Button'
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
 
@@ -8,7 +7,7 @@ export default function DialogPrivacityPolicy() {
   const [open, setOpen] = useState(false)
 
   function setCookie() {
-    localStorage.setItem('user-accept-cookies', 'hasCookie')
+    localStorage.setItem('user-accept-cookies', 'user-accept-cookies')
     setOpen(false)
   }
 
@@ -23,12 +22,7 @@ export default function DialogPrivacityPolicy() {
   return (
 
     <AlertDialog.Root open={open}
-      onOpenChange={(open: any) => {
-        setOpen(open)
-      }}>
-      <AlertDialog.Trigger asChild>
-        <button className="Button violet">Delete account</button>
-      </AlertDialog.Trigger>
+      >
       <AlertDialog.Portal>
         <AlertDialog.Content className="fixed bottom-2 border-t left-[50%] translate-x-[-50%] rounded-2xl bg-white p-5 w-full">
           <h2 className="text-2xl font-bold">Política de privacidade</h2>

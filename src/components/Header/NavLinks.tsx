@@ -13,6 +13,10 @@ export const navLinks = [
     name: 'Sobre Nós',
   },
   {
+    route: '/blog',
+    name: 'Blog',
+  },
+  {
     route: '/contatos',
     name: 'Contatos',
   },
