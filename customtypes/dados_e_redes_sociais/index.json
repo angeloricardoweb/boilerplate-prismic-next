@@ -1,0 +1,60 @@
+{
+  "format": "custom",
+  "id": "dados_e_redes_sociais",
+  "label": "Dados e Redes Sociais",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "whatsapp": {
+        "type": "Text",
+        "config": {
+          "label": "Whatsapp",
+          "placeholder": "ex: 999999999999"
+        }
+      },
+      "instagram": {
+        "type": "Text",
+        "config": {
+          "label": "Instagram",
+          "placeholder": "@seuinstagram"
+        }
+      },
+      "linkedin": {
+        "type": "Text",
+        "config": {
+          "label": "Linkedin",
+          "placeholder": "/seulinkedin"
+        }
+      },
+      "facebook": {
+        "type": "Text",
+        "config": {
+          "label": "Facebook",
+          "placeholder": "@seufacebook"
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "endereco": {
+        "type": "Text",
+        "config": {
+          "label": "Endereço",
+          "placeholder": ""
+        }
+      },
+      "telefone": {
+        "type": "Text",
+        "config": {
+          "label": "Telefone",
+          "placeholder": "Ex: (99) 99999-9999"
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,104 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
+ * Content for Dados e Redes Sociais documents
+ */
+interface DadosERedesSociaisDocumentData {
+  /**
+   * Whatsapp field in *Dados e Redes Sociais*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: ex: 999999999999
+   * - **API ID Path**: dados_e_redes_sociais.whatsapp
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  whatsapp: prismic.KeyTextField;
+
+  /**
+   * Instagram field in *Dados e Redes Sociais*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: @seuinstagram
+   * - **API ID Path**: dados_e_redes_sociais.instagram
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  instagram: prismic.KeyTextField;
+
+  /**
+   * Linkedin field in *Dados e Redes Sociais*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: /seulinkedin
+   * - **API ID Path**: dados_e_redes_sociais.linkedin
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  linkedin: prismic.KeyTextField;
+
+  /**
+   * Facebook field in *Dados e Redes Sociais*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: @seufacebook
+   * - **API ID Path**: dados_e_redes_sociais.facebook
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  facebook: prismic.KeyTextField;
+
+  /**
+   * Email field in *Dados e Redes Sociais*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dados_e_redes_sociais.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Endereço field in *Dados e Redes Sociais*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dados_e_redes_sociais.endereco
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  endereco: prismic.KeyTextField;
+
+  /**
+   * Telefone field in *Dados e Redes Sociais*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Ex: (99) 99999-9999
+   * - **API ID Path**: dados_e_redes_sociais.telefone
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  telefone: prismic.KeyTextField;
+}
+
+/**
+ * Dados e Redes Sociais document from Prismic
+ *
+ * - **API ID**: `dados_e_redes_sociais`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type DadosERedesSociaisDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<DadosERedesSociaisDocumentData>,
+    "dados_e_redes_sociais",
+    Lang
+  >;
+
+/**
  * Item in *Post → Galeria*
  */
 export interface PostDocumentDataGaleriaItem {
@@ -80,7 +178,7 @@ interface PostDocumentData {
 export type PostDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PostDocumentData>, "post", Lang>;
 
-export type AllDocumentTypes = PostDocument;
+export type AllDocumentTypes = DadosERedesSociaisDocument | PostDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -92,6 +190,8 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      DadosERedesSociaisDocument,
+      DadosERedesSociaisDocumentData,
       PostDocument,
       PostDocumentData,
       PostDocumentDataGaleriaItem,
