@@ -1,3 +1,4 @@
+'use client'
 /* eslint-disable @next/next/no-img-element */
 import { Swiper, SwiperSlide } from 'swiper/react'
 // @ts-ignore
