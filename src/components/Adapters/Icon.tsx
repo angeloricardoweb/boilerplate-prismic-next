@@ -6,6 +6,9 @@ export default function Icon(props: IconProps) {
     return (
         <Iconify
             {...props}
+            style={{
+                display: 'inline-block' 
+            }}
         />
     )
 }
