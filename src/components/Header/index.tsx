@@ -35,7 +35,7 @@ export function Header() {
               style={{ height: y > 0 ? '3rem' : '4rem' }}
             />
           </Link>
-          <div className='flex items-center gap-3'>
+          <div className='hidden md:flex items-center gap-3'>
             <NavLinks />
           </div>
           <div
