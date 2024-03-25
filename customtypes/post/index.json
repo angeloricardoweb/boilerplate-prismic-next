@@ -8,7 +8,8 @@
     "Main": {
       "uid": {
         "config": {
-          "label": "UID"
+          "label": "UID",
+          "placeholder": "Ignore este campo, ele se preenche automaticamente."
         },
         "type": "UID"
       },
