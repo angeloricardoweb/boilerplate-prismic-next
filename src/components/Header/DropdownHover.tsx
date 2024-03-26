@@ -1,4 +1,6 @@
+'use client'
 import Link from 'next/link'
+import { usePathname, useSelectedLayoutSegment } from 'next/navigation'
 import React from 'react'
 
 type DropdownHoverProps = {
@@ -7,6 +9,7 @@ type DropdownHoverProps = {
     label: string
     href: string
   }[]
+  mainRoute: string
 }
 
 export function DropdownHover({
@@ -21,10 +24,13 @@ export function DropdownHover({
       href: '/',
     },
   ],
+  mainRoute,
 }: DropdownHoverProps) {
+  const pathName = usePathname()
+
   return (
-    <div className="cursor-pointer relative inline-block group ">
-      <button className="px-2 cursor-pointer text-white hover:text-white transition-colors font-semibold lg:text-sm text-lg mb-4 lg:mb-0 translate-y-[6px]">
+    <div className="cursor-pointer relative inline-block group">
+      <button className={`${pathName.split("/")[1] === mainRoute.split("/")[1] ? "font-bold" : "font-normal"} hover:opacity-70 text-white cursor-pointer translate-y-[6px]`}>
         {title}
       </button>
       <div className=" pt-3">
@@ -38,9 +44,9 @@ export function DropdownHover({
         <div className="p-5 group-hover:block hidden absolute bg-white z-10 min-w-[160px] rounded-md py-2 shadow-2xl translate-x-1/2 right-1/2 ">
           {links.map((link: any, index: any) => (
             <Link href={link.href} passHref key={index}>
-              <a className="block py-1 text-zinc-500 hover:underline">
+              <span className="block py-1 text-zinc-500 hover:underline">
                 {link.label}
-              </a>
+              </span>
             </Link>
           ))}
         </div>
