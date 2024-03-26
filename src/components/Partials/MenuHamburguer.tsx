@@ -31,15 +31,36 @@ export function MenuHamburguer() {
           <div className="flex justify-center py-4 px-10">
             <img src="/img/logo.png" alt="bredi" />
           </div>
-          {navLinks.map((link) => (
-            <div
-              key={link.name}
-              className="text-2xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow"
-              onClick={() => handleRouting(link.route)}
-            >
-              {link.name}
-            </div>
-          ))}
+          {navLinks.map((link) => {
+            if (link.submenu) {
+              return (
+                <div key={link.name} className="text-2xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow">
+                  <div>{link.name}</div>
+                  <div className="flex flex-col gap-2">
+                    {link.submenu.map((sublink) => (
+                      <div
+                        key={sublink.label}
+                        className="text-xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow"
+                        onClick={() => handleRouting(sublink.href)}
+                      >
+                        {sublink.label}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            }
+            else
+              return (
+                <div
+                  key={link.name}
+                  className="text-2xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow"
+                  onClick={() => handleRouting(link.route)}
+                >
+                  {link.name}
+                </div>
+              )
+          })}
           <div className="bg-white py-10">
             <div className='flex flex-col items-center justify-center pb-5'>
               <h2>Idioma</h2>
