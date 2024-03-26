@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import {Container} from '../Partials/Container'
+import { Container } from '../Partials/Container'
 
 export function Copyright() {
   return (
@@ -8,7 +8,7 @@ export function Copyright() {
       <Container>
         <div className="flex items-center justify-center md:justify-between flex-col md:flex-row">
           <p className="text-white text-sm m-0">
-            Boilerplate Next {new Date().getFullYear()} © Todos os direitos
+            Revista Norte Pará {new Date().getFullYear()} © Todos os direitos
             reservados
           </p>
           <div className="flex items-center">
