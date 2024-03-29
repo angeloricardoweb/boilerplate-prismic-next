@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS",
   },
   description: "Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS",
+  keywords: ["Boilerplate", "Next", "Prismic", "TypeScript", "TailwindCSS"],
   twitter: {
     card: "summary_large_image",
   },
