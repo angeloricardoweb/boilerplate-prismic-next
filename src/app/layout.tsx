@@ -11,12 +11,19 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default:"BPN14",
+    default: "BPN14",
     template: "%s | Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS",
   },
   description: "Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS",
   twitter: {
     card: "summary_large_image",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "https://boilerplate-prismic-next14.vercel.app/opengraph-image.png",
+      }
+    ]
   }
 };
 
@@ -40,7 +47,7 @@ export default function RootLayout({
             },
           }}
         />
-        <DialogPrivacityPolicy/>
+        <DialogPrivacityPolicy />
       </body>
     </html>
   );
