@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { PrismicRichText } from '@prismicio/react'
 
-export default function ContentRichText({ data }: { data: [] | undefined }) {
+export default function ContentRichText({ data }: { data: any }) {
   return (
     <PrismicRichText
       field={data}

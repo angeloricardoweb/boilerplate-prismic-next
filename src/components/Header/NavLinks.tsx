@@ -22,6 +22,11 @@ export const navLinks = [
     name: 'Contatos',
   },
   {
+    route: '/servicos',
+    name: 'Serviços',
+    dinamic_submenu_document_type: 'servico', // your document needs to have a field called "titulo"
+  },
+  {
     route: '/submenu',
     name: 'Submenu',
     submenu: [
@@ -43,6 +48,17 @@ export default function NavLinks() {
   return (
     <>
       {navLinks?.map((link) => {
+        if (link.dinamic_submenu_document_type) {
+          return (
+            <DropdownHover
+              key={link.name}
+              mainRoute={link.route}
+              title={link.name}
+              links={link.submenu}
+              dinamic_submenu_document_type={link.dinamic_submenu_document_type}
+            />
+          )
+        }
         if (link.submenu) {
           return (
             <DropdownHover

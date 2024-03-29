@@ -174,7 +174,53 @@ interface PostDocumentData {
 export type PostDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PostDocumentData>, "post", Lang>;
 
-export type AllDocumentTypes = DadosERedesSociaisDocument | PostDocument;
+/**
+ * Content for Serviço documents
+ */
+interface ServicoDocumentData {
+  /**
+   * Título field in *Serviço*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servico.titulo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  titulo: prismic.KeyTextField;
+
+  /**
+   * Descrição field in *Serviço*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servico.descricao
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descricao: prismic.RichTextField;
+}
+
+/**
+ * Serviço document from Prismic
+ *
+ * - **API ID**: `servico`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ServicoDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ServicoDocumentData>,
+    "servico",
+    Lang
+  >;
+
+export type AllDocumentTypes =
+  | DadosERedesSociaisDocument
+  | PostDocument
+  | ServicoDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -190,6 +236,8 @@ declare module "@prismicio/client" {
       DadosERedesSociaisDocumentData,
       PostDocument,
       PostDocumentData,
+      ServicoDocument,
+      ServicoDocumentData,
       AllDocumentTypes,
     };
   }
