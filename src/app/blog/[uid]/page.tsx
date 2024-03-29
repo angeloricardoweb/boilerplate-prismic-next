@@ -8,7 +8,7 @@ const getPostDetails = cache(async (uid: string) => {
     return await client.getByUID("post", uid)
 })
 
-export async function generateMetaData({ params }: { params: { uid: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { uid: string } }): Promise<Metadata> {
     const post = await getPostDetails(params.uid)
 
     return {
