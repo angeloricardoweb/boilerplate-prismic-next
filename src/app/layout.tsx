@@ -19,13 +19,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
-  openGraph: {
-    images: [
-      {
-        url: "https://boilerplate-prismic-next14.vercel.app/opengraph-image.png",
-      }
-    ]
-  }
 };
 
 export default function RootLayout({

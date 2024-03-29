@@ -1,4 +1,17 @@
 import SwiperHero from "@/components/Swipers/SwiperHero";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    openGraph: {
+      images: [
+        {
+          url: "https://boilerplate-prismic-next14.vercel.app/seo.png",
+        }
+      ]
+    }
+  }
+}
 
 export default async function Home() {
   const banners = [
