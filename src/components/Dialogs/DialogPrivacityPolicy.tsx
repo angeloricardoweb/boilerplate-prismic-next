@@ -4,7 +4,6 @@ import sm from '../../../slicemachine.config.json'
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
 import { Button } from '../Buttons/Button';
 
-
 export default function DialogPrivacityPolicy() {
   const [open, setOpen] = useState(false)
 

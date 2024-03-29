@@ -1,9 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
 import { client } from '@/services/prismicClient'
-import React from 'react'
+import { Metadata } from 'next'
+import React, { cache } from 'react'
+export const fetchCache = 'force-no-store'
+
+const getPostDetails = cache(async (uid: string) => {
+    return await client.getByUID("post", uid)
+})
+
+export async function generateMetaData({ params }: { params: { uid: string } }): Promise<Metadata> {
+    const post = await getPostDetails(params.uid)
+
+    return {
+        title: post.data.titulo,
+        description: post.data.resumo,
+        openGraph: {
+            images: [
+                {
+                    url: post.data.capa.url as string,
+                }
+            ]
+        }
+    }
+}
 
 export default async function Page({ params }: { params: { uid: string } }) {
-    const post = await client.getByUID("post", params.uid)
+    const post = await getPostDetails(params.uid)
 
     return (
         <div className='max-w-lg mx-auto py-10'>

@@ -103,21 +103,6 @@ export type DadosERedesSociaisDocument<Lang extends string = string> =
   >;
 
 /**
- * Item in *Post → Galeria*
- */
-export interface PostDocumentDataGaleriaItem {
-  /**
-   * Foto field in *Post → Galeria*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: post.galeria[].foto
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  foto: prismic.ImageField<never>;
-}
-
-/**
  * Content for Post documents
  */
 interface PostDocumentData {
@@ -155,15 +140,26 @@ interface PostDocumentData {
   autor: prismic.KeyTextField;
 
   /**
-   * Galeria field in *Post*
+   * Conteúdo field in *Post*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: post.galeria[]
+   * - **API ID Path**: post.conteudo
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  galeria: prismic.GroupField<Simplify<PostDocumentDataGaleriaItem>>;
+  conteudo: prismic.RichTextField;
+
+  /**
+   * Resumo field in *Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.resumo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  resumo: prismic.KeyTextField;
 }
 
 /**
@@ -194,7 +190,6 @@ declare module "@prismicio/client" {
       DadosERedesSociaisDocumentData,
       PostDocument,
       PostDocumentData,
-      PostDocumentDataGaleriaItem,
       AllDocumentTypes,
     };
   }

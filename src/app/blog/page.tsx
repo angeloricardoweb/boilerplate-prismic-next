@@ -1,7 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import { client } from '@/services/prismicClient'
+import { Metadata } from 'next';
 import Link from 'next/link'
 import React from 'react'
+export const fetchCache = 'force-no-store'
+
+export const metadata: Metadata = {
+    title: "Blog",
+  };
+  
 
 export default async function Page() {
     const posts = await client.getAllByType("post")
