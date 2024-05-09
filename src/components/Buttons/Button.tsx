@@ -47,6 +47,9 @@ export function Button({
       onClick={onClick}
       disabled={disabled}
       type={type}
+      style={{
+        whiteSpace: "nowrap",
+      }}
     >
       {
         isLoading ? <Icon icon="mingcute:loading-fill" className="text-2xl animate-spin" /> : children
