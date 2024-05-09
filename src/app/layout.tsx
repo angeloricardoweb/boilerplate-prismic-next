@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
         <Header />
         {children}
         <Footer />
