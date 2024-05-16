@@ -8,6 +8,7 @@ import { Container } from '../Partials/Container'
 import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
 import { useEffect } from 'react'
 import Icon from '../Adapters/Icon'
+import SearchForm from '../Forms/SearchForm'
 
 export function Header() {
   const { y } = useWindowScroll()
@@ -35,6 +36,7 @@ export function Header() {
               style={{ height: y > 0 ? '3rem' : '4rem' }}
             />
           </Link>
+          <SearchForm/>
           <div className='hidden md:flex items-center gap-3'>
             <NavLinks />
           </div>
