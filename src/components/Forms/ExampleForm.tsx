@@ -1,43 +1,43 @@
-"use client";
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "../Buttons/Button";
+'use client'
+import React, { useEffect } from 'react'
+import { useForm } from 'react-hook-form'
+import * as z from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { Button } from '../Buttons/Button'
 import {
   normalizeCepNumber,
   normalizeCnpjNumber,
   normalizeCpfNumber,
   normalizePhoneNumber,
-} from "./masks";
-import { ZodAllErrors } from "./components/ZodAllErrors";
+} from './masks'
+import { ZodAllErrors } from './components/ZodAllErrors'
 
 const registerSchema = z
   .object({
     name: z
       .string()
-      .min(3, { message: "Nome deve conter no minimo 3 caracteres" }),
-    email: z.string().email({ message: "Email inválido" }),
-    cpf: z.string().min(14, { message: "CPF inválido" }),
-    cnpj: z.string().min(18, { message: "CNPJ inválido" }),
-    cep: z.string().min(9, { message: "CEP inválido" }),
+      .min(3, { message: 'Nome deve conter no minimo 3 caracteres' }),
+    email: z.string().email({ message: 'Email inválido' }),
+    cpf: z.string().min(14, { message: 'CPF inválido' }),
+    cnpj: z.string().min(18, { message: 'CNPJ inválido' }),
+    cep: z.string().min(9, { message: 'CEP inválido' }),
     password: z
       .string()
-      .min(6, { message: "Senha deve conter no minimo 6 caracteres" }),
+      .min(6, { message: 'Senha deve conter no minimo 6 caracteres' }),
     confirmPassword: z
       .string()
-      .min(6, { message: "Senha deve conter no minimo 6 caracteres" }),
-    lang: z.string().min(1, { message: "Selecione uma linguagem" }),
-    descricao: z.string().min(10, { message: "Descrição muito curta" }),
-    telefone: z.string().min(15, { message: "Telefone inválido" }),
-    file: z.any().refine((val) => val.length > 0, "Arquivo obrigatório"),
+      .min(6, { message: 'Senha deve conter no minimo 6 caracteres' }),
+    lang: z.string().min(1, { message: 'Selecione uma linguagem' }),
+    descricao: z.string().min(10, { message: 'Descrição muito curta' }),
+    telefone: z.string().min(15, { message: 'Telefone inválido' }),
+    file: z.any().refine((val) => val.length > 0, 'Arquivo obrigatório'),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Senhas não conferem",
-    path: ["confirmPassword"],
-  });
+    message: 'Senhas não conferem',
+    path: ['confirmPassword'],
+  })
 
-type FormData = z.infer<typeof registerSchema>;
+type FormData = z.infer<typeof registerSchema>
 
 export function ExampleForm() {
   const {
@@ -47,34 +47,34 @@ export function ExampleForm() {
     reset,
     setValue,
     watch,
-  } = useForm<FormData>({ resolver: zodResolver(registerSchema) });
+  } = useForm<FormData>({ resolver: zodResolver(registerSchema) })
 
-  const phoneValue = watch("telefone");
-  const cpfValue = watch("cpf");
-  const cnpjValue = watch("cnpj");
-  const cepValue = watch("cep");
+  const phoneValue = watch('telefone')
+  const cpfValue = watch('cpf')
+  const cnpjValue = watch('cnpj')
+  const cepValue = watch('cep')
 
   async function postForm(data: FormData) {
-    console.log(data);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    reset();
+    console.log(data)
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+    reset()
   }
 
   useEffect(() => {
-    setValue("telefone", normalizePhoneNumber(phoneValue));
-  }, [phoneValue]);
+    setValue('telefone', normalizePhoneNumber(phoneValue))
+  }, [phoneValue, setValue])
 
   useEffect(() => {
-    setValue("cpf", normalizeCpfNumber(cpfValue));
-  }, [cpfValue]);
+    setValue('cpf', normalizeCpfNumber(cpfValue))
+  }, [cpfValue, setValue])
 
   useEffect(() => {
-    setValue("cnpj", normalizeCnpjNumber(cnpjValue));
-  }, [cnpjValue]);
+    setValue('cnpj', normalizeCnpjNumber(cnpjValue))
+  }, [cnpjValue, setValue])
 
   useEffect(() => {
-    setValue("cep", normalizeCepNumber(cepValue));
-  }, [cepValue]);
+    setValue('cep', normalizeCepNumber(cepValue))
+  }, [cepValue, setValue])
 
   return (
     <div className="mt-20">
@@ -89,8 +89,8 @@ export function ExampleForm() {
           <input
             type="text"
             id="nome"
-            {...register("name")}
-            style={errors.name && { border: "1px solid red" }}
+            {...register('name')}
+            style={errors.name && { border: '1px solid red' }}
             className="b-input-text"
             placeholder="John"
           />
@@ -103,8 +103,8 @@ export function ExampleForm() {
           <input
             type="email"
             id="email"
-            {...register("email")}
-            style={errors.email && { border: "1px solid red" }}
+            {...register('email')}
+            style={errors.email && { border: '1px solid red' }}
             className="b-input-text"
             placeholder="voce@email.com"
           />
@@ -118,9 +118,9 @@ export function ExampleForm() {
             type="text"
             id="telefone"
             placeholder="(99) 99999-9999"
-            {...register("telefone")}
+            {...register('telefone')}
             className="b-input-text"
-            style={errors["telefone"] && { border: "1px solid red" }}
+            style={errors.telefone && { border: '1px solid red' }}
           />
         </fieldset>
 
@@ -132,9 +132,9 @@ export function ExampleForm() {
             type="text"
             id="cep"
             placeholder="99999-999"
-            {...register("cep")}
+            {...register('cep')}
             className="b-input-text"
-            style={errors["cep"] && { border: "1px solid red" }}
+            style={errors.cep && { border: '1px solid red' }}
           />
         </fieldset>
 
@@ -146,9 +146,9 @@ export function ExampleForm() {
             type="text"
             id="cpf"
             placeholder="999.999.999-99"
-            {...register("cpf")}
+            {...register('cpf')}
             className="b-input-text"
-            style={errors["cpf"] && { border: "1px solid red" }}
+            style={errors.cpf && { border: '1px solid red' }}
           />
         </fieldset>
 
@@ -160,9 +160,9 @@ export function ExampleForm() {
             type="text"
             id="cnpj"
             placeholder="99.999.999/9999-99"
-            {...register("cnpj")}
+            {...register('cnpj')}
             className="b-input-text"
-            style={errors["cnpj"] && { border: "1px solid red" }}
+            style={errors.cnpj && { border: '1px solid red' }}
           />
         </fieldset>
 
@@ -173,8 +173,8 @@ export function ExampleForm() {
           <input
             type="password"
             id="password"
-            {...register("password")}
-            style={errors.password && { border: "1px solid red" }}
+            {...register('password')}
+            style={errors.password && { border: '1px solid red' }}
             className="b-input-text"
             placeholder="********"
           />
@@ -187,8 +187,8 @@ export function ExampleForm() {
           <input
             type="password"
             id="confirmPassword"
-            {...register("confirmPassword")}
-            style={errors.confirmPassword && { border: "1px solid red" }}
+            {...register('confirmPassword')}
+            style={errors.confirmPassword && { border: '1px solid red' }}
             className="b-input-text"
             placeholder="********"
           />
@@ -201,12 +201,10 @@ export function ExampleForm() {
           <select
             id="lang"
             className="b-input-select"
-            {...register("lang")}
-            style={errors.lang && { border: "1px solid red" }}
+            {...register('lang')}
+            style={errors.lang && { border: '1px solid red' }}
           >
-            <option selected value={""}>
-              Selecione
-            </option>
+            <option defaultValue={''}>Selecione</option>
             <option value="javascript">JavaScript</option>
             <option value="php">Php</option>
             <option value="python">Python</option>
@@ -220,8 +218,8 @@ export function ExampleForm() {
           <textarea
             id="message"
             rows={4}
-            {...register("descricao")}
-            style={errors.descricao && { border: "1px solid red" }}
+            {...register('descricao')}
+            style={errors.descricao && { border: '1px solid red' }}
             className="b-input-textarea"
             placeholder="Escreva sua mensagem aqui..."
           ></textarea>
@@ -233,8 +231,8 @@ export function ExampleForm() {
           </label>
           <input
             className="b-input-file"
-            {...register("file")}
-            style={errors.file && { border: "1px solid red" }}
+            {...register('file')}
+            style={errors.file && { border: '1px solid red' }}
             id="file_input"
             type="file"
           />
@@ -251,5 +249,5 @@ export function ExampleForm() {
         </div>
       </form>
     </div>
-  );
+  )
 }

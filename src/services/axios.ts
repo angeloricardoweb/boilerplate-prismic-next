@@ -13,8 +13,7 @@ api.interceptors.request.use(
     const token = Cookies.get('token') || '-------------no-token-------------'
 
     if (token) {
-      // @ts-ignore
-      config.headers['Authorization'] = `Bearer ${token}`
+      config.headers.Authorization = `Bearer ${token}`
     }
 
     return config
@@ -22,7 +21,7 @@ api.interceptors.request.use(
 
   (error) => {
     return Promise.reject(error)
-  }
+  },
 )
 
 // intercepa 401 e manda para o login
@@ -37,5 +36,5 @@ api.interceptors.response.use(
     }
 
     return Promise.reject(error)
-  }
+  },
 )

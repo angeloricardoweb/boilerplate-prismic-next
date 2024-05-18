@@ -1,36 +1,37 @@
-import Footer from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { MenuHamburguer } from "@/components/Partials/MenuHamburguer";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import Footer from '@/components/Footer'
+import { Header } from '@/components/Header'
+import { MenuHamburguer } from '@/components/Partials/MenuHamburguer'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import 'swiper/css/bundle'
-import "../styles/index.scss"
-import DialogPrivacityPolicy from "@/components/Dialogs/DialogPrivacityPolicy";
-const inter = Inter({ subsets: ["latin"] });
+import '../styles/index.scss'
+import DialogPrivacityPolicy from '@/components/Dialogs/DialogPrivacityPolicy'
+const inter = Inter({ subsets: ['latin'] })
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: {
-    default: "BPN14",
-    template: "%s | Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS",
+    default: 'BPN14',
+    template:
+      '%s | Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS',
   },
-  description: "Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS",
-  keywords: ["Boilerplate", "Next", "Prismic", "TypeScript", "TailwindCSS"],
+  description: 'Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS',
+  keywords: ['Boilerplate', 'Next', 'Prismic', 'TypeScript', 'TailwindCSS'],
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <Header />
         {children}
         <Footer />
@@ -46,5 +47,5 @@ export default function RootLayout({
         <DialogPrivacityPolicy />
       </body>
     </html>
-  );
+  )
 }

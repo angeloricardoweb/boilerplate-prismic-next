@@ -15,7 +15,7 @@ const Analytics = () => (
             gtag('config', 'G-______', {
               page_path: window.location.pathname,
             });
-          `
+          `,
       }}
     />
   </>

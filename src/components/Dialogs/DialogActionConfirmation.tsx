@@ -3,7 +3,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { Icon } from '@iconify/react'
 
 type Props = {
-  actionOnAccept: any
+  actionOnAccept: () => void
   title: string
   description: string
   children: React.ReactNode
@@ -15,7 +15,7 @@ export const DialogActionConfirmation = (props: Props) => {
   return (
     <Dialog.Root
       open={open}
-      onOpenChange={(open: any) => {
+      onOpenChange={(open: boolean) => {
         setOpen(open)
       }}
     >

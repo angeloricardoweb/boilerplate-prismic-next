@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { Container } from '../Partials/Container'
 
@@ -8,10 +7,10 @@ export function Copyright() {
       <Container>
         <div className="flex items-center justify-center md:justify-between flex-col md:flex-row">
           <p className="text-xs m-0">
-            Boilerplate Prismic Next 14 - {new Date().getFullYear()} © Todos os direitos
-            reservados
+            Boilerplate Prismic Next 14 - {new Date().getFullYear()} © Todos os
+            direitos reservados
           </p>
-          
+
           <div className="flex items-center">
             <p className="flex items-center text-xs">
               <a
@@ -19,7 +18,7 @@ export function Copyright() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Made in 
+                Made in
                 <img
                   src="/next.svg"
                   alt="next"
@@ -36,7 +35,7 @@ export function Copyright() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Powered by 
+                Powered by
                 <img
                   src="/vercel.svg"
                   alt="vercel"

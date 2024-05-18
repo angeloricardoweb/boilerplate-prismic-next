@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
-import { Container } from "../Partials/Container";
-import Icon from "../Adapters/Icon";
+'use client'
+import React from 'react'
+import { Container } from '../Partials/Container'
+import Icon from '../Adapters/Icon'
 
 export default function SectionFaq() {
   return (
@@ -17,17 +17,17 @@ export default function SectionFaq() {
         </ColapseItem>
       </Container>
     </section>
-  );
+  )
 }
 
 function ColapseItem({
   title,
   children,
 }: {
-  title: string;
-  children: React.ReactNode;
+  title: string
+  children: React.ReactNode
 }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   return (
     <details className="mt-2">
@@ -38,10 +38,10 @@ function ColapseItem({
         <span className="font-bold">{title}</span>
         <Icon
           icon="akar-icons:chevron-up"
-          className={`float-right transition-all ${open ? "rotate-180" : ""} `}
+          className={`float-right transition-all ${open ? 'rotate-180' : ''} `}
         />
       </summary>
       <div className="bg-zinc-100 p-5">{children}</div>
     </details>
-  );
+  )
 }

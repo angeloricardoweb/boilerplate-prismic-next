@@ -1,25 +1,27 @@
 'use client'
-import React, { FormEvent } from "react";
-import { Search } from "lucide-react";
-import { useRouter, useSearchParams } from "next/navigation";
+import React, { FormEvent } from 'react'
+import { Search } from 'lucide-react'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 export default function SearchForm() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const query = searchParams.get("q") || "";
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const query = searchParams.get('q') || ''
 
   function handleSearch(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const query = formData.get("q") as string;
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const query = formData.get('q') as string
+    if (!query) return
 
-    if (!query) return;
-
-    router.push(`/search?q=${query}`);
+    router.push(`/search?q=${query}`)
   }
 
   return (
-    <form onSubmit={handleSearch} className="flex w-[320px] items-center gap-3 rounded-full bg-zinc-100 px-5 py-2 ring-zinc-700">
+    <form
+      onSubmit={handleSearch}
+      className="flex w-[320px] items-center gap-3 rounded-full bg-zinc-100 px-5 py-2 ring-zinc-700"
+    >
       <Search className="size-5 text-zinc-500s" />
       <input
         name="q"
@@ -28,5 +30,5 @@ export default function SearchForm() {
         required
       />
     </form>
-  );
+  )
 }

@@ -1,5 +1,4 @@
 import Cookies from 'js-cookie'
-import React from 'react'
 
 export function useCookies() {
   function addCookie(key: string, value: string) {
@@ -12,6 +11,6 @@ export function useCookies() {
 
   return {
     addCookie,
-    getCookie
+    getCookie,
   }
 }

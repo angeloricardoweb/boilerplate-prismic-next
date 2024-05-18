@@ -8,7 +8,7 @@ export function useAuth() {
     try {
       await api.get('/auth/check-token')
       setAuthenticated(true)
-    } catch (error: any) {
+    } catch (error: unknown) {
       setAuthenticated(false)
     }
   }

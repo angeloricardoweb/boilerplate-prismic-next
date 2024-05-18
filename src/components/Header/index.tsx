@@ -1,5 +1,5 @@
 'use client'
-/* eslint-disable @next/next/no-img-element */
+
 import TopBar from './TopBar'
 import NavLinks from './NavLinks'
 import { useWindowScroll } from 'react-use'
@@ -22,8 +22,9 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full shadow-xl backdrop-blur transition-all ${y > 0 ? 'bg-black/70' : 'bg-black'
-        } `}
+      className={`sticky top-0 z-50 w-full shadow-xl backdrop-blur transition-all ${
+        y > 0 ? 'bg-black/70' : 'bg-black'
+      } `}
     >
       <TopBar />
       <Container>
@@ -36,8 +37,8 @@ export function Header() {
               style={{ height: y > 0 ? '3rem' : '4rem' }}
             />
           </Link>
-          <SearchForm/>
-          <div className='hidden md:flex items-center gap-3'>
+          <SearchForm />
+          <div className="hidden md:flex items-center gap-3">
             <NavLinks />
           </div>
           <div

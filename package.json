@@ -39,6 +39,7 @@
   "devDependencies": {
     "@iconify/react": "^4.1.1",
     "@prismicio/types": "^0.2.8",
+    "@rocketseat/eslint-config": "^2.2.2",
     "@slicemachine/adapter-next": "^0.3.36",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
@@ -46,7 +47,7 @@
     "@types/react-dom": "^18",
     "@types/react-input-mask": "^3.0.5",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.1.2",
     "postcss": "^8",
     "sass": "^1.71.1",

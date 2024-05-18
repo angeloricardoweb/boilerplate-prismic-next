@@ -18,8 +18,9 @@ export function MenuHamburguer() {
 
   return (
     <div
-      className={`fixed w-[90%] md:hidden h-full bg-[url(/img/background.png)] bg-cover bg-center bg-fixed top-0 flex items-center justify-center shadow-2xl z-[999999] bg-white/80 backdrop-blur-md ${showMenuHamburguer ? 'right-0' : '-right-[700px]'
-        } transition-all overflow-y-auto`}
+      className={`fixed w-[90%] md:hidden h-full bg-[url(/img/background.png)] bg-cover bg-center bg-fixed top-0 flex items-center justify-center shadow-2xl z-[999999] bg-white/80 backdrop-blur-md ${
+        showMenuHamburguer ? 'right-0' : '-right-[700px]'
+      } transition-all overflow-y-auto`}
     >
       <div className="w-full h-full relative">
         <Icon
@@ -34,7 +35,10 @@ export function MenuHamburguer() {
           {navLinks.map((link) => {
             if (link.submenu) {
               return (
-                <div key={link.name} className="text-2xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow">
+                <div
+                  key={link.name}
+                  className="text-2xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow"
+                >
                   <div>{link.name}</div>
                   <div className="flex flex-col gap-2">
                     {link.submenu.map((sublink) => (
@@ -49,8 +53,7 @@ export function MenuHamburguer() {
                   </div>
                 </div>
               )
-            }
-            else
+            } else
               return (
                 <div
                   key={link.name}
@@ -62,7 +65,7 @@ export function MenuHamburguer() {
               )
           })}
           <div className="bg-white py-10">
-            <div className='flex flex-col items-center justify-center pb-5'>
+            <div className="flex flex-col items-center justify-center pb-5">
               <h2>Idioma</h2>
               <LanguageToggle />
             </div>

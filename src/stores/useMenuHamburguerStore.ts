@@ -8,8 +8,8 @@ interface IMenuHamburguerStore {
 const useMenuHamburguerStore = create<IMenuHamburguerStore>((set) => ({
   showMenuHamburguer: false,
   setShowMenuHamburguer: (showMenuHamburguer: boolean) => {
-    set((state) => ({
-      showMenuHamburguer: showMenuHamburguer,
+    set(() => ({
+      showMenuHamburguer,
     }))
   },
 }))

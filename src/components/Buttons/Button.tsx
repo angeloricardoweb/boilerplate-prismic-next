@@ -1,18 +1,16 @@
 'use client'
 import React from 'react'
-import Icon from '../Adapters/Icon'
 import { LoaderCircle } from 'lucide-react'
-
 
 type Props = {
   children: React.ReactNode
   variant:
-  | 'primaryGreen'
-  | 'primaryViolet'
-  | 'primaryPink'
-  | 'secondary'
-  | 'outlinedWhite'
-  | 'outlinedBlack'
+    | 'primaryGreen'
+    | 'primaryViolet'
+    | 'primaryPink'
+    | 'secondary'
+    | 'outlinedWhite'
+    | 'outlinedBlack'
   color?: string
   disabled?: boolean
   onClick?: any
@@ -50,12 +48,14 @@ export function Button({
       disabled={disabled}
       type={type}
       style={{
-        whiteSpace: "nowrap",
+        whiteSpace: 'nowrap',
       }}
     >
-      {
-        isLoading ? <LoaderCircle className="size-5 animate-spin mx-4" /> : children
-      }
+      {isLoading ? (
+        <LoaderCircle className="size-5 animate-spin mx-4" />
+      ) : (
+        children
+      )}
     </button>
   )
 }

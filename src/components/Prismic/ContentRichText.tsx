@@ -1,10 +1,14 @@
-/* eslint-disable @next/next/no-img-element */
 import { PrismicRichText } from '@prismicio/react'
+import * as prismic from '@prismicio/client'
 
-export default function ContentRichText({ data }: { data: any }) {
+export default function ContentRichText({
+  data,
+}: {
+  data: prismic.RichTextField | null | undefined
+}) {
   return (
     <PrismicRichText
-      field={data}
+      field={data as prismic.RichTextField | null | undefined}
       components={{
         heading1: ({ children }) => (
           <h1 className="mb-5 text-3xl font-bold">{children}</h1>
@@ -44,7 +48,7 @@ export default function ContentRichText({ data }: { data: any }) {
           />
         ),
         hyperlink: ({ children, node }) => (
-          <a href={node.data.url} target="_blank" rel="noreferrer" >
+          <a href={node.data.url} target="_blank" rel="noreferrer">
             {children}
           </a>
         ),

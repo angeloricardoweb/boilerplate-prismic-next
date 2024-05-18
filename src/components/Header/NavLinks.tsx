@@ -37,8 +37,8 @@ export const navLinks = [
       {
         label: 'Submenu 2',
         href: '/submenu/submenu2',
-      }
-    ]
+      },
+    ],
   },
 ]
 
@@ -55,7 +55,7 @@ export default function NavLinks() {
               mainRoute={link.route}
               title={link.name}
               links={link.submenu}
-              dinamic_submenu_document_type={link.dinamic_submenu_document_type}
+              dinamicSubmenuDocumentType={link.dinamic_submenu_document_type}
             />
           )
         }
@@ -71,7 +71,11 @@ export default function NavLinks() {
         }
         return (
           <Link key={link.name} href={link.route}>
-            <span className={`${segment === link.route.replace("/", "") ? "font-bold" : "font-normal"} hover:opacity-70 text-white cursor-pointer`}>{link.name}</span>
+            <span
+              className={`${segment === link.route.replace('/', '') ? 'font-bold' : 'font-normal'} hover:opacity-70 text-white cursor-pointer`}
+            >
+              {link.name}
+            </span>
           </Link>
         )
       })}
