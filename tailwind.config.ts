@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite-react/lib/**/*.js",
   ],
   theme: {
     extend: {
@@ -17,18 +18,18 @@ const config: Config = {
             50: "#949494",
           },
           blue: {
-            50: '#F6F7FF',
+            50: "#F6F7FF",
           },
           purple: {
-            600: '#5F69E2'
+            600: "#5F69E2",
           },
           yellow: {
-            100: "#DACE00"
+            100: "#DACE00",
           },
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
 export default config;

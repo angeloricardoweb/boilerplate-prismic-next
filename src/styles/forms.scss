@@ -1,10 +1,19 @@
-.input-text {
-  @apply bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4;
+.b-label {
+  @apply block text-sm font-medium text-gray-900;
 }
 
-.input-text[disabled] {
-  @apply bg-gray-100 text-gray-500 cursor-not-allowed;
+.b-input-text {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5;
 }
-.label {
-  @apply block mb-1 mt-2 text-lg font-medium text-gray-900;
+
+.b-input-select {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5;
+}
+
+.b-input-textarea {
+  @apply block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.b-input-file {
+  @apply block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50;
 }
