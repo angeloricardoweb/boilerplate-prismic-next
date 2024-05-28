@@ -53,7 +53,12 @@ function CollapseItem({
         onClick={() => setOpen(!open)}
       >
         <h3 className="text-lg font-semibold">{title}</h3>
-        <ChevronDown />
+        <ChevronDown
+          size={24}
+          className={`transition-transform transform ${
+            open ? 'rotate-180' : ''
+          }`}
+        />
       </button>
       <Collapse isOpened={open}>{children}</Collapse>
     </div>
