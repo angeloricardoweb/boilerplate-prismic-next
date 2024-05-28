@@ -33,7 +33,9 @@ export default async function Home() {
   return (
     <main>
       <SwiperHero banners={banners} />
-      <SectionFaq />
+      <div className="mb-5">
+        <SectionFaq />
+      </div>
     </main>
   )
 }

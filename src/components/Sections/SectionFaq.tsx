@@ -1,47 +1,61 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { Container } from '../Partials/Container'
-import Icon from '../Adapters/Icon'
+import { Collapse } from 'react-collapse'
+import { ChevronDown } from 'lucide-react'
+
+const faq = [
+  {
+    question: 'Como faço para comprar uma passagem?',
+    answer:
+      'Para comprar uma passagem, basta acessar o site da Turvicam, escolher o destino, data e horário desejado e clicar em comprar. Caso tenha alguma dúvida, entre em contato conosco.',
+  },
+  {
+    question: 'Como faço para comprar uma passagem?',
+    answer:
+      'Para comprar uma passagem, basta acessar o site da Turvicam, escolher o destino, data e horário desejado e clicar em comprar. Caso tenha alguma dúvida, entre em contato conosco.',
+  },
+  {
+    question: 'Como faço para comprar uma passagem?',
+    answer:
+      'Para comprar uma passagem, basta acessar o site da Turvicam, escolher o destino, data e horário desejado e clicar em comprar. Caso tenha alguma dúvida, entre em contato conosco.',
+  },
+]
 
 export default function SectionFaq() {
   return (
     <section className="mt-20">
       <Container>
         <h2 className="text-4xl font-bold text-center">Perguntas frequentes</h2>
-        <ColapseItem title="Como faço para comprar uma passagem?">
-          <p>
-            Para comprar uma passagem, basta acessar o site da Turvicam,
-            escolher o destino, data e horário desejado e clicar em comprar.
-            Caso tenha alguma dúvida, entre em contato conosco.
-          </p>
-        </ColapseItem>
+        {faq.map((item, index) => (
+          <CollapseItem key={index} title={item.question}>
+            <p className="p-3 bg-zinc-100 rounded-b">{item.answer}</p>
+          </CollapseItem>
+        ))}
       </Container>
     </section>
   )
 }
 
-function ColapseItem({
+function CollapseItem({
   title,
   children,
 }: {
   title: string
   children: React.ReactNode
 }) {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
 
   return (
-    <details className="mt-2">
-      <summary
-        className="text-lg border p-3 flex items-center justify-between cursor-pointer group hover:bg-gray-100 transition-all rounded-md"
+    <div>
+      <button
+        className="flex items-center justify-between w-full p-4 mt-4 bg-white rounded-lg shadow-md"
         onClick={() => setOpen(!open)}
       >
-        <span className="font-bold">{title}</span>
-        <Icon
-          icon="akar-icons:chevron-up"
-          className={`float-right transition-all ${open ? 'rotate-180' : ''} `}
-        />
-      </summary>
-      <div className="bg-zinc-100 p-5">{children}</div>
-    </details>
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <ChevronDown />
+      </button>
+      <Collapse isOpened={open}>{children}</Collapse>
+    </div>
   )
 }
