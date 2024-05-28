@@ -1,4 +1,4 @@
-import { client } from '@/services/prismicClient'
+import { getServicesList } from '@/services/prismicData'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Page() {
-  const servicos = await client.getAllByType('servico')
+  const servicos = await getServicesList()
 
   return (
     <div className="flex justify-center gap-10 flex-wrap pt-10 pb-40">

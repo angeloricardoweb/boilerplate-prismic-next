@@ -1,12 +1,8 @@
 import ContentRichText from '@/components/Prismic/ContentRichText'
-import { client } from '@/services/prismicClient'
+import { getPostDetails } from '@/services/prismicData'
 import { Metadata } from 'next'
-import React, { cache } from 'react'
+import React from 'react'
 export const fetchCache = 'force-no-store'
-
-const getPostDetails = cache(async (uid: string) => {
-  return await client.getByUID('post', uid)
-})
 
 export async function generateMetadata({
   params,
