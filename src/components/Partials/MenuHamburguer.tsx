@@ -5,6 +5,7 @@ import { navLinks } from '../Header/NavLinks'
 import { Icon } from '@iconify/react'
 import { LanguageToggle } from './LanguageToggle'
 import { useRouter } from 'next/navigation'
+import { ChevronDown } from 'lucide-react'
 
 export function MenuHamburguer() {
   const { setShowMenuHamburguer, showMenuHamburguer } = useMenuHamburguerStore()
@@ -22,29 +23,33 @@ export function MenuHamburguer() {
         showMenuHamburguer ? 'right-0' : '-right-[700px]'
       } transition-all overflow-y-auto`}
     >
-      <div className="w-full h-full relative">
+      <div className="w-full h-full relative py-20">
         <Icon
           icon="mdi:close"
           className="text-3xl absolute top-5 right-5 cursor-pointer"
           onClick={() => setShowMenuHamburguer(false)}
         />
+        <div className="flex justify-center py-4 px-10">
+          <img src="/img/logo.png" alt="bredi" />
+        </div>
+
         <div className="py-20">
-          <div className="flex justify-center py-4 px-10">
-            <img src="/img/logo.png" alt="bredi" />
-          </div>
           {navLinks.map((link) => {
             if (link.submenu) {
               return (
                 <div
                   key={link.name}
-                  className="text-2xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow"
+                  className="text-2xl cursor-pointer text-zinc-900 bg-white  border-b border-brand-yellow"
                 >
-                  <div>{link.name}</div>
-                  <div className="flex flex-col gap-2">
-                    {link.submenu.map((sublink) => (
+                  <div className="border-b p-5 flex justify-between">
+                    <div className="">{link.name}</div>
+                    <ChevronDown size={20} className="mt-2 text-black/40" />
+                  </div>
+                  <div className="flex flex-col gap-2 px-5 py-1">
+                    {link.submenu.map((sublink, index) => (
                       <div
                         key={sublink.label}
-                        className="text-xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow"
+                        className={`text-xl cursor-pointer text-zinc-900 bg-white p-5 ${link.submenu.length - 1 === index ? '' : 'border-b'}`}
                         onClick={() => handleRouting(sublink.href)}
                       >
                         {sublink.label}
@@ -64,6 +69,7 @@ export function MenuHamburguer() {
                 </div>
               )
           })}
+
           <div className="bg-white py-10">
             <div className="flex flex-col items-center justify-center pb-5">
               <h2>Idioma</h2>
