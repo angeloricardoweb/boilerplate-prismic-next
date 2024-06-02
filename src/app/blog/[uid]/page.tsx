@@ -28,7 +28,7 @@ export default async function Page({ params }: { params: { uid: string } }) {
   const post = await getPostDetails(params.uid)
 
   return (
-    <div className="max-w-lg mx-auto py-10">
+    <div className="mx-auto max-w-lg py-10">
       {post.data.capa.url && (
         <img src={post.data.capa.url} alt={post.data.capa.alt ?? 'capa'} />
       )}

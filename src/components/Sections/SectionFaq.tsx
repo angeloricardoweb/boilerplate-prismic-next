@@ -26,10 +26,10 @@ export default function SectionFaq() {
   return (
     <section className="mt-20">
       <Container>
-        <h2 className="text-4xl font-bold text-center">Perguntas frequentes</h2>
+        <h2 className="text-center text-4xl font-bold">Perguntas frequentes</h2>
         {faq.map((item, index) => (
           <CollapseItem key={index} title={item.question}>
-            <p className="p-3 bg-zinc-100 rounded-b">{item.answer}</p>
+            <p className="rounded-b bg-zinc-100 p-3">{item.answer}</p>
           </CollapseItem>
         ))}
       </Container>
@@ -49,13 +49,13 @@ function CollapseItem({
   return (
     <div>
       <button
-        className="flex items-center justify-between w-full p-4 mt-4 bg-white rounded-lg shadow-md"
+        className="mt-4 flex w-full items-center justify-between rounded-lg bg-white p-4 shadow-md"
         onClick={() => setOpen(!open)}
       >
         <h3 className="text-lg font-semibold">{title}</h3>
         <ChevronDown
           size={24}
-          className={`transition-transform transform ${
+          className={`transform transition-transform ${
             open ? 'rotate-180' : ''
           }`}
         />

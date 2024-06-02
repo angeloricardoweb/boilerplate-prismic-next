@@ -12,7 +12,7 @@ export default async function Page() {
   const posts = await getPostList()
 
   return (
-    <div className="flex justify-center gap-10 flex-wrap pt-10 pb-40">
+    <div className="flex flex-wrap justify-center gap-10 pb-40 pt-10">
       {posts.map((post) => (
         <Link
           href={`/blog/${post.uid}`}

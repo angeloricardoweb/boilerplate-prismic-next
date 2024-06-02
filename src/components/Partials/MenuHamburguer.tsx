@@ -19,17 +19,17 @@ export function MenuHamburguer() {
 
   return (
     <div
-      className={`fixed w-[90%] md:hidden h-full bg-[url(/img/background.png)] bg-cover bg-center bg-fixed top-0 flex items-center justify-center shadow-2xl z-[999999] bg-white/80 backdrop-blur-md ${
+      className={`fixed top-0 z-[999999] flex h-full w-[90%] items-center justify-center bg-white/80 bg-[url(/img/background.png)] bg-cover bg-fixed bg-center shadow-2xl backdrop-blur-md md:hidden ${
         showMenuHamburguer ? 'right-0' : '-right-[700px]'
-      } transition-all overflow-y-auto`}
+      } overflow-y-auto transition-all`}
     >
-      <div className="w-full h-full relative py-20">
+      <div className="relative h-full w-full py-20">
         <Icon
           icon="mdi:close"
-          className="text-3xl absolute top-5 right-5 cursor-pointer"
+          className="absolute right-5 top-5 cursor-pointer text-3xl"
           onClick={() => setShowMenuHamburguer(false)}
         />
-        <div className="flex justify-center py-4 px-10">
+        <div className="flex justify-center px-10 py-4">
           <img src="/img/logo.png" alt="bredi" />
         </div>
 
@@ -39,9 +39,9 @@ export function MenuHamburguer() {
               return (
                 <div
                   key={link.name}
-                  className="text-2xl cursor-pointer text-zinc-900 bg-white  border-b border-brand-yellow"
+                  className="border-brand-yellow cursor-pointer border-b bg-white text-2xl text-zinc-900"
                 >
-                  <div className="border-b p-5 flex justify-between">
+                  <div className="flex justify-between border-b p-5">
                     <div className="">{link.name}</div>
                     <ChevronDown size={20} className="mt-2 text-black/40" />
                   </div>
@@ -49,7 +49,7 @@ export function MenuHamburguer() {
                     {link.submenu.map((sublink, index) => (
                       <div
                         key={sublink.label}
-                        className={`text-xl cursor-pointer text-zinc-900 bg-white p-5 ${link.submenu.length - 1 === index ? '' : 'border-b'}`}
+                        className={`cursor-pointer bg-white p-5 text-xl text-zinc-900 ${link.submenu.length - 1 === index ? '' : 'border-b'}`}
                         onClick={() => handleRouting(sublink.href)}
                       >
                         {sublink.label}
@@ -62,7 +62,7 @@ export function MenuHamburguer() {
               return (
                 <div
                   key={link.name}
-                  className="text-2xl cursor-pointer text-zinc-900 bg-white p-5 border-b border-brand-yellow"
+                  className="border-brand-yellow cursor-pointer border-b bg-white p-5 text-2xl text-zinc-900"
                   onClick={() => handleRouting(link.route)}
                 >
                   {link.name}
@@ -75,10 +75,10 @@ export function MenuHamburguer() {
               <h2>Idioma</h2>
               <LanguageToggle />
             </div>
-            <p className="text-zinc-900 text-center text-xl">
+            <p className="text-center text-xl text-zinc-900">
               contato@site.com.br
             </p>
-            <p className="text-zinc-900 text-center text-xl flex justify-center items-center">
+            <p className="flex items-center justify-center text-center text-xl text-zinc-900">
               <Icon
                 icon="mdi:whatsapp"
                 className="text-brand-yellow mr-2 text-xl"
