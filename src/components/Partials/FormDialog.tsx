@@ -44,13 +44,13 @@ export function FormDialog({ name = 'Contato' }: { name?: string }) {
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <button
         onClick={() => setOpen(true)}
-        className="border bg-white border-1 border-purple-800 px-14 py-3 rounded-xl text-purple-800 font-light hover:bg-gray-50 transition-colors"
+        className="border-1 rounded-xl border border-purple-800 bg-white px-14 py-3 font-light text-purple-800 transition-colors hover:bg-gray-50"
       >
         {name}
       </button>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed top-0 left-0 z-50 w-screen h-screen bg-black bg-opacity-50" />
-        <Dialog.Content className="fixed top-1/2 left-1/2 z-50 transform -translate-x-1/2 -translate-y-1/2 max-w-[600px] bg-white p-10 rounded-xl">
+        <Dialog.Overlay className="fixed left-0 top-0 z-50 h-screen w-screen bg-black bg-opacity-50" />
+        <Dialog.Content className="fixed left-1/2 top-1/2 z-50 max-w-[600px] -translate-x-1/2 -translate-y-1/2 transform rounded-xl bg-white p-10">
           <Dialog.Close className="absolute right-6 top-6 border-none text-zinc-500 hover:text-zinc-200">
             <Icon icon="ic:round-close" className="h-6 w-6" />
           </Dialog.Close>
@@ -58,7 +58,7 @@ export function FormDialog({ name = 'Contato' }: { name?: string }) {
             Contate-nos
           </Dialog.Title>
           <form
-            className="grid md:grid-cols-2 gap-5 mt-5"
+            className="mt-5 grid gap-5 md:grid-cols-2"
             onSubmit={handleSubmit(handlePostForm)}
           >
             <div>
@@ -112,7 +112,7 @@ export function FormDialog({ name = 'Contato' }: { name?: string }) {
               )}
             </div>
             <button
-              className="bg-black rounded-xl px-6 py-3 text-white border-1 border-black border hover:bg-gray-600/40 transitio-all duration-500 hover:text-black"
+              className="border-1 transitio-all rounded-xl border border-black bg-black px-6 py-3 text-white duration-500 hover:bg-gray-600/40 hover:text-black"
               type="submit"
               disabled={isSubmitting}
             >

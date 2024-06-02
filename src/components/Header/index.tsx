@@ -33,19 +33,19 @@ export function Header() {
             <img
               src="/img/logo.png"
               alt=""
-              className="py-3 transition-all cursor-pointer"
+              className="cursor-pointer py-3 transition-all"
               style={{ height: y > 0 ? '3rem' : '4rem' }}
             />
           </Link>
           <SearchForm />
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden items-center gap-3 md:flex">
             <NavLinks />
           </div>
           <div
             className="md:hidden"
             onClick={() => setShowMenuHamburguer(true)}
           >
-            <Icon icon="mdi:menu" className="text-white text-3xl" />
+            <Icon icon="mdi:menu" className="text-3xl text-white" />
           </div>
         </div>
       </Container>

@@ -22,7 +22,7 @@ export default function SearchForm() {
       onSubmit={handleSearch}
       className="flex w-[320px] items-center gap-3 rounded-full bg-zinc-100 px-5 py-2 ring-zinc-700"
     >
-      <Search className="size-5 text-zinc-500s" />
+      <Search className="text-zinc-500s size-5" />
       <input
         name="q"
         defaultValue={query}

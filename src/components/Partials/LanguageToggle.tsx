@@ -51,14 +51,14 @@ export function LanguageToggle() {
       <div className="flex gap-2">
         <Icon
           icon="emojione:flag-for-brazil"
-          className={`text-3xl md:text-xl rounded-full ring-white ${
+          className={`rounded-full text-3xl ring-white md:text-xl ${
             Cookies.get('googtrans') === '/auto/pt' && 'ring-2'
           }`}
           onClick={(e) => langChange('/auto/pt', e)}
         />
         <Icon
           icon="emojione:flag-for-united-states"
-          className={`text-3xl md:text-xl rounded-full ring-white ${
+          className={`rounded-full text-3xl ring-white md:text-xl ${
             Cookies.get('googtrans') === '/pt/en' && 'ring-2'
           }`}
           onClick={(e) => langChange('/auto/en', e)}

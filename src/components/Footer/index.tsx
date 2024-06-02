@@ -10,9 +10,9 @@ export default function Footer() {
   return (
     <footer className="border-t pt-5">
       <Container>
-        <div className="flex justify-between flex-wrap gap-10">
+        <div className="flex flex-wrap justify-between gap-10">
           <div className="w-[320px]">
-            <div className="bg-black w-fit rounded-full flex items-center justify-center p-1 ">
+            <div className="flex w-fit items-center justify-center rounded-full bg-black p-1">
               <img src="/img/logo.png" alt="Logo" className="w-20" />
             </div>
             <small className="mt-4">
@@ -23,8 +23,8 @@ export default function Footer() {
             </small>
           </div>
 
-          <div className="flex gap-10 flex-wrap">
-            <div className="flex flex-col w-[320px]">
+          <div className="flex flex-wrap gap-10">
+            <div className="flex w-[320px] flex-col">
               <strong>Encontre nosso escritório</strong>
               <small>
                 Rodovia Augusto Montenegro, 4300, Parque Office, Torre Norte,
@@ -34,7 +34,7 @@ export default function Footer() {
               <small>Segunda à sexta, de 8h às 17h</small>
             </div>
 
-            <div className="flex flex-col gap-5 w-[80px]">
+            <div className="flex w-[80px] flex-col gap-5">
               {navLinks.map((link) => {
                 return (
                   <Link href={link.route} key={link.name}>
@@ -44,7 +44,7 @@ export default function Footer() {
               })}
             </div>
 
-            <div className="flex flex-col w-[80px]">
+            <div className="flex w-[80px] flex-col">
               <strong>Siga nos</strong>
               <div className="flex gap-2">
                 <a href="/" rel="noreferrer" target="_blank">

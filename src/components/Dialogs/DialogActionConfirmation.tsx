@@ -22,12 +22,12 @@ export const DialogActionConfirmation = (props: Props) => {
       <Dialog.Trigger asChild>{props.children}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/80" />
-        <Dialog.Content className="fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-2xl border border-zinc-600 bg-black p-10">
-          <Dialog.Close className="absolute top-0 right-0 m-3 text-white text-2xl">
+        <Dialog.Content className="fixed left-[50%] top-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-2xl border border-zinc-600 bg-black p-10">
+          <Dialog.Close className="absolute right-0 top-0 m-3 text-2xl text-white">
             <Icon icon="mdi:close" />
           </Dialog.Close>
           <h2 className="text-center text-2xl font-bold">{props.title}</h2>
-          <p className="text-center mt-2 text-zinc-300">{props.description}</p>
+          <p className="mt-2 text-center text-zinc-300">{props.description}</p>
           <div className="mt-5 grid grid-cols-2 gap-3">
             <button
               onClick={() => {

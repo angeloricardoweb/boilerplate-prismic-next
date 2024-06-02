@@ -14,7 +14,7 @@ export default function ContentRichText({
           <h1 className="mb-5 text-3xl font-bold">{children}</h1>
         ),
         heading2: ({ children }) => (
-          <h2 className="mb-3 text-2xl font-bold mt-4">{children}</h2>
+          <h2 className="mb-3 mt-4 text-2xl font-bold">{children}</h2>
         ),
         heading3: ({ children }) => (
           <h3 className="text-xl font-bold">{children}</h3>
@@ -29,7 +29,7 @@ export default function ContentRichText({
           <h6 className="text-sm font-bold">{children}</h6>
         ),
         paragraph: ({ children }) => (
-          <p className="text-base mb-3">{children}</p>
+          <p className="mb-3 text-base">{children}</p>
         ),
         preformatted: ({ children }) => <pre>{children}</pre>,
         strong: ({ children }) => (

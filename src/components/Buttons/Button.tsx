@@ -36,14 +36,7 @@ export function Button({
 
   return (
     <button
-      className={`flex items-center justify-center gap-2 rounded-md px-4 py-2 transition-all hover:opacity-75 disabled:opacity-50
-        ${variant === 'primaryGreen' && primaryGreen}
-        ${variant === 'primaryViolet' && primaryViolet}
-        ${variant === 'primaryPink' && primaryPink}
-        ${variant === 'outlinedWhite' && outlinedWhite}
-        ${variant === 'outlinedBlack' && outlinedBlack}
-        ${full ? 'w-full' : 'w-fit'}
-      `}
+      className={`flex items-center justify-center gap-2 rounded-md px-4 py-2 transition-all hover:opacity-75 disabled:opacity-50 ${variant === 'primaryGreen' && primaryGreen} ${variant === 'primaryViolet' && primaryViolet} ${variant === 'primaryPink' && primaryPink} ${variant === 'outlinedWhite' && outlinedWhite} ${variant === 'outlinedBlack' && outlinedBlack} ${full ? 'w-full' : 'w-fit'} `}
       onClick={onClick}
       disabled={disabled}
       type={type}
@@ -52,7 +45,7 @@ export function Button({
       }}
     >
       {isLoading ? (
-        <LoaderCircle className="size-5 animate-spin mx-4" />
+        <LoaderCircle className="mx-4 size-5 animate-spin" />
       ) : (
         children
       )}

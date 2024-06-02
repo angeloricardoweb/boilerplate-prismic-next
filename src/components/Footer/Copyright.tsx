@@ -3,10 +3,10 @@ import { Container } from '../Partials/Container'
 
 export function Copyright() {
   return (
-    <div className="py-4 border-t border-t-zinc-600 mt-10 ">
+    <div className="mt-10 border-t border-t-zinc-600 py-4">
       <Container>
-        <div className="flex items-center justify-center md:justify-between flex-col md:flex-row">
-          <p className="text-xs m-0">
+        <div className="flex flex-col items-center justify-center md:flex-row md:justify-between">
+          <p className="m-0 text-xs">
             Boilerplate Prismic Next 14 - {new Date().getFullYear()} © Todos os
             direitos reservados
           </p>
@@ -23,13 +23,13 @@ export function Copyright() {
                   src="/next.svg"
                   alt="next"
                   width={48}
-                  className="inline-block ml-2"
+                  className="ml-2 inline-block"
                 />
               </a>
             </p>
           </div>
           <div className="flex items-center">
-            <p className="flex items-center text-xs m-0">
+            <p className="m-0 flex items-center text-xs">
               <a
                 href="https://www.bredi.com.br/"
                 target="_blank"
@@ -40,7 +40,7 @@ export function Copyright() {
                   src="/vercel.svg"
                   alt="vercel"
                   width={48}
-                  className="inline-block ml-2"
+                  className="ml-2 inline-block"
                 />
               </a>
             </p>

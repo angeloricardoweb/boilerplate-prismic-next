@@ -72,7 +72,7 @@ export default function NavLinks() {
         return (
           <Link key={link.name} href={link.route}>
             <span
-              className={`${segment === link.route.replace('/', '') ? 'font-bold' : 'font-normal'} hover:opacity-70 text-white cursor-pointer`}
+              className={`${segment === link.route.replace('/', '') ? 'font-bold' : 'font-normal'} cursor-pointer text-white hover:opacity-70`}
             >
               {link.name}
             </span>

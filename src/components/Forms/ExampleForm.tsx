@@ -80,7 +80,7 @@ export function ExampleForm() {
     <div className="mt-20">
       <form
         onSubmit={handleSubmit(postForm)}
-        className="grid grid-cols-3 gap-2 mx-auto max-w-4xl"
+        className="mx-auto grid max-w-4xl grid-cols-3 gap-2"
       >
         <fieldset>
           <label htmlFor="nome" className="b-label">

@@ -24,7 +24,7 @@ export default function DialogPrivacityPolicy() {
   return (
     <AlertDialog.Root open={open}>
       <AlertDialog.Portal>
-        <AlertDialog.Content className="fixed bottom-2 border-t left-[50%] translate-x-[-50%] rounded-2xl bg-white p-5 w-full z-[9999]">
+        <AlertDialog.Content className="fixed bottom-2 left-[50%] z-[9999] w-full translate-x-[-50%] rounded-2xl border-t bg-white p-5">
           <h2 className="text-2xl font-bold">Política de privacidade</h2>
           <p>
             Nós armazenamos dados temporariamente para melhorar a sua

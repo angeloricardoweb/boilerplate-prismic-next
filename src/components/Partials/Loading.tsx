@@ -6,7 +6,7 @@ export function Loading() {
     <div className="flex justify-center">
       <Icon
         icon="mingcute:loading-fill"
-        className="text-cyan-500 animate-spin"
+        className="animate-spin text-cyan-500"
         width="40"
         height="40"
       />

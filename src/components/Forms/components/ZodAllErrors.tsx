@@ -5,7 +5,7 @@ export function ZodAllErrors({ errors }: { errors: any }) {
         return (
           <small
             key={index}
-            className="text-white font-bold block bg-red-500 px-2 py-1 rounded mb-1"
+            className="mb-1 block rounded bg-red-500 px-2 py-1 font-bold text-white"
           >
             {errors[key]?.message}
           </small>
