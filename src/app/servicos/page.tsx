@@ -12,7 +12,7 @@ export default async function Page() {
   const servicos = await getServicesList()
 
   return (
-    <div className="flex justify-center gap-10 flex-wrap pt-10 pb-40">
+    <div className="flex flex-wrap justify-center gap-10 pb-40 pt-10">
       {servicos.map((servico) => (
         <Link
           href={`/servicos/${servico.uid}`}
