@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: { uid: string } }) {
   const servico = await getServicesDetails(params.uid)
 
   return (
-    <div className="max-w-lg mx-auto py-10">
+    <div className="mx-auto max-w-lg py-10">
       <h2>{servico.data.titulo}</h2>
       <ContentRichText data={servico.data.descricao} />
     </div>
