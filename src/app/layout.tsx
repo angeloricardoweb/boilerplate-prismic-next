@@ -30,6 +30,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <head>
+        {/* <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-V7KJF6JS26`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-V7KJF6JS26');
+            `,
+          }}
+        /> */}
+
+        <link
+          rel="stylesheet"
+          href={`https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css`}
+        />
+        <script
+          async
+          src={`https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js`}
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={inter.className}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <Header />

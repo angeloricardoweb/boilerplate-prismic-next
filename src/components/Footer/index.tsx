@@ -13,7 +13,13 @@ export default function Footer() {
         <div className="flex flex-wrap justify-between gap-10">
           <div className="w-[320px]">
             <div className="flex w-fit items-center justify-center rounded-full bg-black p-1">
-              <img src="/img/logo.png" alt="Logo" className="w-20" />
+              <img
+                src="/img/logo.png"
+                data-fancybox
+                data-caption="Single image"
+                alt="Logo"
+                className="w-20 cursor-pointer"
+              />
             </div>
             <small className="mt-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
