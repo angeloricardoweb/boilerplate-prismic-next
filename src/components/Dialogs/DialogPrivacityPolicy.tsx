@@ -24,9 +24,9 @@ export default function DialogPrivacityPolicy() {
   return (
     <AlertDialog.Root open={open}>
       <AlertDialog.Portal>
-        <AlertDialog.Content className="fixed bottom-2 left-[50%] z-[9999] w-full translate-x-[-50%] rounded-2xl border-t bg-white p-5">
+        <AlertDialog.Content className="fixed bottom-2 left-[50%] z-[9999] w-[90%] translate-x-[-50%] rounded-lg border border-t border-b-red-50 bg-white/80 p-5 md:w-[70%]">
           <h2 className="text-2xl font-bold">Política de privacidade</h2>
-          <p>
+          <p className="mb-4">
             Nós armazenamos dados temporariamente para melhorar a sua
             experiência de navegação e recomendar conteúdo de seu interesse. Ao
             utilizar nossos serviços, você concorda com tal monitoramento.
@@ -39,7 +39,7 @@ export default function DialogPrivacityPolicy() {
               onClick={() => {
                 setOpen(false)
               }}
-              variant="secondary"
+              variant="outlinedBlack"
             >
               Rejeitar
             </Button>

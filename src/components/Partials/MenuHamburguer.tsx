@@ -81,7 +81,7 @@ export function MenuHamburguer() {
             <p className="flex items-center justify-center text-center text-xl text-zinc-900">
               <Icon
                 icon="mdi:whatsapp"
-                className="text-brand-yellow mr-2 text-xl"
+                className="mr-2 text-xl text-blue-300"
               />{' '}
               (99) 9999-9999
             </p>
