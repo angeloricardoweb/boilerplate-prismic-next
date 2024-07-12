@@ -45,6 +45,16 @@ export function Copyright() {
               </a>
             </p>
           </div>
+
+          {/* <div>
+            <a href="https://www.bredi.com.br/" target="blank" rel="noreferrer">
+              <small className="flex flex-row items-center gap-2">
+                Desenvolvido por
+                <strong>Bredi</strong>
+                <img src="/img/logos/logo-bredi.svg" alt="logo bredi" />
+              </small>
+            </a>
+          </div> */}
         </div>
       </Container>
     </div>
