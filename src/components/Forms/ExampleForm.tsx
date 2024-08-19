@@ -98,7 +98,7 @@ export function ExampleForm() {
 
         <fieldset>
           <label htmlFor="email" className="b-label">
-            Nome
+            Email
           </label>
           <input
             type="email"

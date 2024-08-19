@@ -22,7 +22,6 @@ export function LanguageToggle() {
   }
 
   const googleTranslateElementInit = () => {
-    // eslint-disable-next-line no-new
     new window.google.translate.TranslateElement(
       {
         pageLanguage: 'pt',
@@ -30,7 +29,7 @@ export function LanguageToggle() {
         includedLanguages: 'en,pt',
         layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
       },
-      'google_translate_element',
+      'google_translate_element'
     )
   }
 
@@ -39,7 +38,7 @@ export function LanguageToggle() {
       const addScript = document.createElement('script')
       addScript.setAttribute(
         'src',
-        '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit',
+        '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
       )
       document.body.appendChild(addScript)
       window.googleTranslateElementInit = googleTranslateElementInit

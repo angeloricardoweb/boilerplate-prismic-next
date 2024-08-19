@@ -56,6 +56,7 @@ export default function RootLayout({
           src={`https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js`}
           crossOrigin="anonymous"
         />
+        <meta name="google" content="notranslate"/>
       </head>
       <body className={inter.className}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
