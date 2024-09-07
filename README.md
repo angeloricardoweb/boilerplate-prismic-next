@@ -28,3 +28,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# Dicas
+
+## Realizando Chamadas do Servidor em Componentes que operam no lado do cliente
+
+Para realizar chamadas ao servidor e utilizar os dados em componentes React, siga o exemplo abaixo. Usamos os hooks `useState` e `useEffect` para gerenciar o estado e realizar uma chamada assíncrona.
+
+### Exemplo de Código
+
+```typescript
+const [informationsFooter, setInformationsFooter] = 
+  React.useState<DadosERedesSociaisDocument | null>(null);
+
+async function getData() {
+  const informationFooter = await getInformations();
+  setInformationsFooter(informationFooter);
+}
+
+React.useEffect(() => {
+  getData();
+}, []);
+
+```
+
+## Explicação
+
+- `useState`: Inicializa o estado informationsFooter como null ou com o tipo esperado.
+- `getData`: Função assíncrona que busca as informações do servidor usando getInformations() e atualiza o estado com os dados.
+- `useEffect`: Chama a função getData() assim que o componente é montado, garantindo que os dados do servidor sejam obtidos assim que o componente for renderizado.
+
+

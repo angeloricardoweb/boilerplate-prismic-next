@@ -7,6 +7,8 @@ import { Copyright } from './Copyright'
 import Icon from '../Adapters/Icon'
 
 export default function Footer() {
+  /* Follow the example in the README to make server calls in React components that operate on the client side */
+
   return (
     <footer className="border-t pt-5">
       <Container>
