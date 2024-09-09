@@ -11,11 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: {
-    default: 'BPN14',
-    template:
-      '%s | Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS',
-  },
+  title: 'BPN14 | Home',
   description: 'Boilerplate Next 15 with Prismic, TypeScript and TailwindCSS',
   keywords: ['Boilerplate', 'Next', 'Prismic', 'TypeScript', 'TailwindCSS'],
   twitter: {
@@ -56,7 +52,7 @@ export default function RootLayout({
           src={`https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js`}
           crossOrigin="anonymous"
         />
-        <meta name="google" content="notranslate"/>
+        <meta name="google" content="notranslate" />
       </head>
       <body className={inter.className}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
