@@ -24,7 +24,7 @@ const faq = [
 
 export default function SectionFaq() {
   return (
-    <section className="mt-20">
+    <section className="py-20">
       <Container>
         <h2 className="text-center text-4xl font-bold">Perguntas frequentes</h2>
         {faq.map((item, index) => (
