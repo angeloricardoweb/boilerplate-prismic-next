@@ -1,4 +1,9 @@
 import { ExampleForm } from '@/components/Forms/ExampleForm'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'BPN14 | Contatos',
+}
 
 export default function Home() {
   return (

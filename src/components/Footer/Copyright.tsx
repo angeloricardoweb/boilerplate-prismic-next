@@ -3,10 +3,10 @@ import { Container } from '../Partials/Container'
 
 export function Copyright() {
   return (
-    <div className="mt-10 border-t border-t-zinc-600 py-4">
+    <div className="border-t border-t-zinc-600 py-4">
       <Container>
         <div className="flex flex-col items-center justify-center md:flex-row md:justify-between">
-          <p className="m-0 text-xs">
+          <p className="m-0 text-xs text-center md:text-start">
             Boilerplate Prismic Next 14 - {new Date().getFullYear()} © Todos os
             direitos reservados
           </p>
