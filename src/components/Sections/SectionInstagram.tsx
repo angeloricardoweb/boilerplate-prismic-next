@@ -8,7 +8,7 @@ import FadeAnimation from '../Animations/FadeAnimation'
 export function SectionInstagram() {
   /* update the token with your instagram token */
   const token =
-    'IGQWROQTdkUnpjQnVKelNLZA0hqWERlMk1oTWhCcF9uWTcyOEs5aGpHLUx6MU0wY3BJcjJSdElkY0tlaGozWG5UVVJlMUdnRUhrSzk1MHFoYVRjUk9LWTRGcG4tWGJvUTdhYVc2MnlVR1VSdwZDZD'
+    'IGQWROQTdkUnpjQnVKelNLZsadsdisdjfnskMk1oTWhCcF9uWTcyOaswlls254a598asda26UhrSzk1MHFoYVRjUk9LWTRGcG4tWGJvUTdhYVc2MnlVR1VSdwZDZD'
 
   const { data, error } = useFetch(
     `https://graph.instagram.com/me/media?fields=id,username,thumbnail_url,media_url,profile_pic,media_type,permalink&access_token=${token}`,
