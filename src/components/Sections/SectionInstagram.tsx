@@ -40,7 +40,7 @@ export function SectionInstagram() {
           </div>
           <div className="col-span-12 md:col-span-7">
             {/* To enable dynamic swiper remove the "!" */}
-            {!data ? (
+            {data && data.data ? (
               <Swiper
                 spaceBetween={10}
                 slidesPerView={1}
