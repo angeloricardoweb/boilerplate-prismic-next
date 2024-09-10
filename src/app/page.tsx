@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       images: [
         {
-          url: 'https://boilerplate-prismic-next14.vercel.app/seo.png',
+          url: process.env.VERCEL_URL + '/seo.png',
         },
       ],
     },
