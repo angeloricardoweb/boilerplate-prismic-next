@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       images: [
         {
-          url: process.env.VERCEL_URL + '/seo.png',
+          url: 'https://' + process.env.VERCEL_URL + '/seo.png',
         },
       ],
     },
