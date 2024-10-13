@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
-import { navLinks } from '../Header/NavLinks'
+// import Link from 'next/link'
+// import { navLinks } from '../Header/NavLinks'
 import { Container } from '../Partials/Container'
 import { Copyright } from './Copyright'
 import Icon from '../Adapters/Icon'
@@ -35,13 +35,13 @@ export default function Footer() {
 
           <div className="col-span-12 md:col-span-8 grid grid-cols-12 gap-4">
             <div className="col-span-12 flex gap-4 justify-center md:justify-end items-center flex-wrap">
-              {navLinks.map((link) => {
+              {/* {navLinks.map((link) => {
                 return (
                   <Link href={link.route} key={link.name}>
                     <strong>{link.name}</strong>
                   </Link>
                 )
-              })}
+              })} */}
             </div>
             <div className="col-span-12 md:col-span-2"></div>
 

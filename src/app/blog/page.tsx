@@ -1,4 +1,4 @@
-import { getPostList } from '@/services/prismicData'
+import { getPostList } from '@/services/prismicData/getPostList'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'

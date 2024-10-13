@@ -1,21 +1,21 @@
 'use client'
 import React from 'react'
 import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
-import { navLinks } from '../Header/NavLinks'
+// import { navLinks } from '../Header/NavLinks'
 import { Icon } from '@iconify/react'
 import { LanguageToggle } from './LanguageToggle'
-import { useRouter } from 'next/navigation'
-import { ChevronDown } from 'lucide-react'
+// import { useRouter } from 'next/navigation'
+// import { ChevronDown } from 'lucide-react'
 
 export function MenuHamburguer() {
   const { setShowMenuHamburguer, showMenuHamburguer } = useMenuHamburguerStore()
 
-  const router = useRouter() // router.push('/')
+  // const router = useRouter() // router.push('/')
 
-  function handleRouting(routeName: string) {
-    router.push(routeName)
-    setShowMenuHamburguer(false)
-  }
+  // function handleRouting(routeName: string) {
+  //   router.push(routeName)
+  //   setShowMenuHamburguer(false)
+  // }
 
   return (
     <div
@@ -34,7 +34,7 @@ export function MenuHamburguer() {
         </div>
 
         <div className="py-20">
-          {navLinks.map((link) => {
+          {/* {navLinks.map((link) => {
             if (link.submenu) {
               return (
                 <div
@@ -68,7 +68,7 @@ export function MenuHamburguer() {
                   {link.name}
                 </div>
               )
-          })}
+          })} */}
 
           <div className="bg-white py-10">
             <div className="flex flex-col items-center justify-center pb-5">

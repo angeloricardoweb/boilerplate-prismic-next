@@ -1,5 +1,5 @@
 import ContentRichText from '@/components/Prismic/ContentRichText'
-import { getPostDetails } from '@/services/prismicData'
+import { getPostDetails } from '@/services/prismicData/getPostDetails'
 import { Metadata } from 'next'
 import React from 'react'
 export const fetchCache = 'force-no-store'

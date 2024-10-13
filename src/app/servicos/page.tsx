@@ -1,4 +1,4 @@
-import { getServicesList } from '@/services/prismicData'
+import { getServicesList } from '@/services/prismicData/getServiceList'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'
