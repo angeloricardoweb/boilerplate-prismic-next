@@ -3,7 +3,6 @@ import React from 'react'
 import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
 // import { navLinks } from '../Header/NavLinks'
 import { Icon } from '@iconify/react'
-import { LanguageToggle } from './LanguageToggle'
 // import { useRouter } from 'next/navigation'
 // import { ChevronDown } from 'lucide-react'
 
@@ -73,7 +72,6 @@ export function MenuHamburguer() {
           <div className="bg-white py-10">
             <div className="flex flex-col items-center justify-center pb-5">
               <h2>Idioma</h2>
-              <LanguageToggle />
             </div>
             <p className="text-center text-xl text-zinc-900">
               contato@site.com.br
