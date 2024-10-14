@@ -1,6 +1,5 @@
-import { cache } from 'react'
 import { client } from '../prismicClient'
 
-export const getPrismicRepository = cache(async () => {
+export const getPrismicRepository = async () => {
   return await client.getRepository()
-})
+}
