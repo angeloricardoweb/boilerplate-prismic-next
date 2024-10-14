@@ -36,7 +36,7 @@ export default async function Home() {
       <SwiperHero banners={banners} />
       <div>
         <SectionFaq />
-        <SectionInstagram />
+        {/* <SectionInstagram /> */}
       </div>
     </main>
   )

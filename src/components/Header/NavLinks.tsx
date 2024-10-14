@@ -76,6 +76,7 @@ export default function NavLinks() {
           <Link key={link.name} href={link.route}>
             <span
               className={`${segment === link.route.replace('/', '') ? 'font-bold' : 'font-normal'} cursor-pointer text-white hover:opacity-70`}
+              suppressHydrationWarning
             >
               {link.name}
             </span>
