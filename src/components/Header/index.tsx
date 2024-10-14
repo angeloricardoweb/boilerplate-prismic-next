@@ -1,5 +1,4 @@
 'use client'
-
 import TopBar from './TopBar'
 import NavLinks from './NavLinks'
 import { useWindowScroll } from 'react-use'
