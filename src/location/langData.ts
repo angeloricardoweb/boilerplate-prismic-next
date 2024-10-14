@@ -15,4 +15,24 @@ export const langData = {
     'en-us': 'Services',
     'pt-br': 'Serviços',
   },
+  Submenu: {
+    'en-us': 'Submenu',
+    'pt-br': 'Submenu',
+  },
+  Blog: {
+    'en-us': 'Blog',
+    'pt-br': 'Blog',
+  },
+  FrequentlyAskedQuestions: {
+    'en-us': 'Frequently Asked Questions',
+    'pt-br': 'Perguntas Frequentes',
+  },
+  AddressTitle: {
+    'en-us': 'Address',
+    'pt-br': 'Endereço',
+  },
+  FollowUs: {
+    'en-us': 'Follow Us',
+    'pt-br': 'Siga-nos',
+  },
 }

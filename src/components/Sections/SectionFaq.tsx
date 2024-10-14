@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { Container } from '../Partials/Container'
 import { Collapse } from 'react-collapse'
 import { ChevronDown } from 'lucide-react'
+import useLang from '@/hooks/useLang'
+import { langData } from '@/location/langData'
 
 const faq = [
   {
@@ -23,10 +25,14 @@ const faq = [
 ]
 
 export default function SectionFaq() {
+  const { stringData } = useLang()
+
   return (
     <section className="py-20">
       <Container>
-        <h2 className="text-center text-4xl font-bold">Perguntas frequentes</h2>
+        <h2 className="text-center text-4xl font-bold">
+          {stringData(langData.FrequentlyAskedQuestions)}
+        </h2>
         {faq.map((item, index) => (
           <CollapseItem key={index} title={item.question}>
             <p className="rounded-b bg-zinc-100 p-3">{item.answer}</p>

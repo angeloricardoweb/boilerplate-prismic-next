@@ -3,50 +3,11 @@ import Link from 'next/link'
 import Icon from '../Adapters/Icon'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import { DropdownHover } from './DropdownHover'
-import useLang from '@/hooks/useLang'
-import { langData } from '@/location/langData'
+import useNavLinks from '@/hooks/useNavLinks'
 
 export default function NavLinks() {
   const segment = useSelectedLayoutSegment()
-  const { stringData } = useLang()
-
-  const navLinks = [
-    {
-      route: '/',
-      name: stringData(langData.Home),
-    },
-    {
-      route: '/sobre-nos',
-      name: stringData(langData.About),
-    },
-    {
-      route: '/blog',
-      name: 'Blog',
-    },
-    {
-      route: '/contatos',
-      name: stringData(langData.Contact),
-    },
-    {
-      route: '/servicos',
-      name: stringData(langData.Services),
-      dinamic_submenu_document_type: 'servico', // your document needs to have a field called "titulo"
-    },
-    {
-      route: '/submenu',
-      name: 'Submenu',
-      submenu: [
-        {
-          label: 'Submenu 1',
-          href: '/submenu/submenu1',
-        },
-        {
-          label: 'Submenu 2',
-          href: '/submenu/submenu2',
-        },
-      ],
-    },
-  ]
+  const { navLinks } = useNavLinks()
 
   return (
     <>
