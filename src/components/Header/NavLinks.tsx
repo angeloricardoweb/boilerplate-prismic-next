@@ -3,47 +3,11 @@ import Link from 'next/link'
 import Icon from '../Adapters/Icon'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import { DropdownHover } from './DropdownHover'
-
-export const navLinks = [
-  {
-    route: '/',
-    name: 'Home',
-  },
-  {
-    route: '/sobre-nos',
-    name: 'Sobre Nós',
-  },
-  {
-    route: '/blog',
-    name: 'Blog',
-  },
-  {
-    route: '/contatos',
-    name: 'Contatos',
-  },
-  {
-    route: '/servicos',
-    name: 'Serviços',
-    dinamic_submenu_document_type: 'servico', // your document needs to have a field called "titulo"
-  },
-  {
-    route: '/submenu',
-    name: 'Submenu',
-    submenu: [
-      {
-        label: 'Submenu 1',
-        href: '/submenu/submenu1',
-      },
-      {
-        label: 'Submenu 2',
-        href: '/submenu/submenu2',
-      },
-    ],
-  },
-]
+import useNavLinks from '@/hooks/useNavLinks'
 
 export default function NavLinks() {
   const segment = useSelectedLayoutSegment()
+  const { navLinks } = useNavLinks()
 
   return (
     <>
@@ -73,6 +37,7 @@ export default function NavLinks() {
           <Link key={link.name} href={link.route}>
             <span
               className={`${segment === link.route.replace('/', '') ? 'font-bold' : 'font-normal'} cursor-pointer text-white hover:opacity-70`}
+              suppressHydrationWarning
             >
               {link.name}
             </span>

@@ -1,7 +1,7 @@
 import SwiperHero from '@/components/Swipers/SwiperHero'
 import SectionFaq from '@/components/Sections/SectionFaq'
 import { Metadata } from 'next'
-import { SectionInstagram } from '@/components/Sections/SectionInstagram'
+// import { SectionInstagram } from '@/components/Sections/SectionInstagram'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -36,7 +36,7 @@ export default async function Home() {
       <SwiperHero banners={banners} />
       <div>
         <SectionFaq />
-        <SectionInstagram />
+        {/* <SectionInstagram /> */}
       </div>
     </main>
   )

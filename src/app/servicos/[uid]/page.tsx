@@ -1,5 +1,5 @@
 import ContentRichText from '@/components/Prismic/ContentRichText'
-import { getServicesDetails } from '@/services/prismicData'
+import { getServiceDetails } from '@/services/prismicData/getServiceDetails'
 import { Metadata } from 'next'
 import React from 'react'
 export const fetchCache = 'force-no-store'
@@ -9,7 +9,7 @@ export async function generateMetadata({
 }: {
   params: { uid: string }
 }): Promise<Metadata> {
-  const servico = await getServicesDetails(params.uid)
+  const servico = await getServiceDetails(params.uid)
 
   return {
     title: servico.data.titulo,
@@ -17,7 +17,7 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: { params: { uid: string } }) {
-  const servico = await getServicesDetails(params.uid)
+  const servico = await getServiceDetails(params.uid)
 
   return (
     <div className="mx-auto max-w-lg py-10">

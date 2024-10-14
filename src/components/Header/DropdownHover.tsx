@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 import { client } from '@/services/prismicClient'
+import { useCookies } from '@/stores/useCookies'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -37,10 +38,16 @@ export function DropdownHover({
 }: DropdownHoverProps) {
   const pathName = usePathname()
   const [dinamicSubmenu, setDinamicSubmenu] = useState<DinamicSubmenu[]>([])
+  const { getCookie } = useCookies()
 
   async function getDinamicSubmenu() {
+    const lang = getCookie('lang')
+
     const docs: any = await client.getAllByType(
       dinamicSubmenuDocumentType as any,
+      {
+        lang,
+      },
     )
     setDinamicSubmenu(
       docs.map((doc: any) => ({ uid: doc.uid, title: doc.data.titulo })),
