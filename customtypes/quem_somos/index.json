@@ -1,0 +1,28 @@
+{
+  "format": "custom",
+  "id": "quem_somos",
+  "label": "Quem somos",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "banner": {
+        "type": "Image",
+        "config": {
+          "label": "Banner",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "conteudo": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Conteúdo",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}

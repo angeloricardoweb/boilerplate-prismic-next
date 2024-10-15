@@ -5,27 +5,43 @@ import { Collapse } from 'react-collapse'
 import { ChevronDown } from 'lucide-react'
 import useLang from '@/hooks/useLang'
 import { langData } from '@/location/langData'
-
-const faq = [
-  {
-    question: 'Como faço para comprar uma passagem?',
-    answer:
-      'Para comprar uma passagem, basta acessar o site da Turvicam, escolher o destino, data e horário desejado e clicar em comprar. Caso tenha alguma dúvida, entre em contato conosco.',
-  },
-  {
-    question: 'Como faço para comprar uma passagem?',
-    answer:
-      'Para comprar uma passagem, basta acessar o site da Turvicam, escolher o destino, data e horário desejado e clicar em comprar. Caso tenha alguma dúvida, entre em contato conosco.',
-  },
-  {
-    question: 'Como faço para comprar uma passagem?',
-    answer:
-      'Para comprar uma passagem, basta acessar o site da Turvicam, escolher o destino, data e horário desejado e clicar em comprar. Caso tenha alguma dúvida, entre em contato conosco.',
-  },
-]
+import useSWR from 'swr'
+import { getFaq } from '@/services/prismicData/getFaq'
 
 export default function SectionFaq() {
   const { stringData } = useLang()
+
+  const {
+    data: faq,
+    error,
+    isLoading,
+  } = useSWR('getFaq', async () => {
+    const response = await getFaq()
+    return response
+  })
+
+  if (error) return null
+
+  if (isLoading) {
+    return (
+      <section className="py-20">
+        <Container>
+          <h2 className="text-center text-4xl font-bold">
+            {stringData(langData.FrequentlyAskedQuestions)}
+          </h2>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <div key={index} className="mt-4">
+              <div className="animate-pulse flex w-full items-center justify-between rounded-lg bg-white p-4 shadow-md">
+                <div className="w-3/4 bg-gray-200 h-6 rounded-lg"></div>
+                <div className="w-1/4 bg-gray-200 h-6 rounded-lg"></div>
+              </div>
+              <div className="rounded-b bg-zinc-100 p-3 h-16"></div>
+            </div>
+          ))}
+        </Container>
+      </section>
+    )
+  }
 
   return (
     <section className="py-20">
@@ -33,9 +49,9 @@ export default function SectionFaq() {
         <h2 className="text-center text-4xl font-bold">
           {stringData(langData.FrequentlyAskedQuestions)}
         </h2>
-        {faq.map((item, index) => (
-          <CollapseItem key={index} title={item.question}>
-            <p className="rounded-b bg-zinc-100 p-3">{item.answer}</p>
+        {faq?.data.items.map((item, index) => (
+          <CollapseItem key={index} title={item.pergunta as string}>
+            <p className="rounded-b bg-zinc-100 p-3">{item.resposta}</p>
           </CollapseItem>
         ))}
       </Container>
