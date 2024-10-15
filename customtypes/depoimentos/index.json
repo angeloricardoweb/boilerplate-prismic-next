@@ -1,0 +1,42 @@
+{
+  "format": "custom",
+  "id": "depoimentos",
+  "label": "Depoimentos",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "items": {
+        "type": "Group",
+        "config": {
+          "label": "Items",
+          "repeat": true,
+          "fields": {
+            "imagem": {
+              "type": "Image",
+              "config": {
+                "label": "Imagem",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "descricao": {
+              "type": "Text",
+              "config": {
+                "label": "Descrição",
+                "placeholder": ""
+              }
+            },
+            "autor": {
+              "type": "Text",
+              "config": {
+                "label": "Autor",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

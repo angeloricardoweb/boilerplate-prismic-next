@@ -1,0 +1,35 @@
+{
+  "format": "custom",
+  "id": "banners",
+  "label": "Banners",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "items": {
+        "type": "Group",
+        "config": {
+          "label": "Items",
+          "repeat": true,
+          "fields": {
+            "banner": {
+              "type": "Image",
+              "config": {
+                "label": "Banner",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "link": {
+              "type": "Text",
+              "config": {
+                "label": "Link",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
