@@ -14,7 +14,7 @@ export function SectionInstagram() {
     `https://graph.instagram.com/me/media?fields=id,username,thumbnail_url,media_url,profile_pic,media_type,permalink&access_token=${token}`,
   )
   if (error) {
-    console.log(error)
+    return null
   }
 
   return (

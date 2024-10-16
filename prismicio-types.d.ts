@@ -9,14 +9,24 @@ type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
  */
 export interface BannersDocumentDataItemsItem {
   /**
-   * Banner field in *Banners → Items*
+   * Banner Desktop field in *Banners → Items*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: banners.items[].banner
+   * - **API ID Path**: banners.items[].banner_desktop
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  banner: prismic.ImageField<never>
+  banner_desktop: prismic.ImageField<never>
+
+  /**
+   * Banner Mobile field in *Banners → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banners.items[].banner_mobile
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  banner_mobile: prismic.ImageField<never>
 
   /**
    * Link field in *Banners → Items*

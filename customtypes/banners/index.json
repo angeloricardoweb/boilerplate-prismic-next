@@ -12,11 +12,25 @@
           "label": "Items",
           "repeat": true,
           "fields": {
-            "banner": {
+            "banner_desktop": {
               "type": "Image",
               "config": {
-                "label": "Banner",
-                "constraint": {},
+                "label": "Banner Desktop",
+                "constraint": {
+                  "width": 1400,
+                  "height": 700
+                },
+                "thumbnails": []
+              }
+            },
+            "banner_mobile": {
+              "type": "Image",
+              "config": {
+                "label": "Banner Mobile",
+                "constraint": {
+                  "width": 580,
+                  "height": 846
+                },
                 "thumbnails": []
               }
             },
