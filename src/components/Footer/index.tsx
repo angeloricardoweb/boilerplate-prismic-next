@@ -1,5 +1,4 @@
 'use client'
-
 import Link from 'next/link'
 import { Container } from '../Partials/Container'
 import { Copyright } from './Copyright'
@@ -7,10 +6,17 @@ import Icon from '../Adapters/Icon'
 import useLang from '@/hooks/useLang'
 import { langData } from '@/location/langData'
 import useNavLinks from '@/hooks/useNavLinks'
+import useSWR from 'swr'
+import { getInfos } from '@/services/prismicData/getInfos'
 
 export default function Footer() {
   const { stringData } = useLang()
   const { navLinks } = useNavLinks()
+
+  const { data: infos } = useSWR('getInfos', async () => {
+    const response = await getInfos()
+    return response
+  })
 
   return (
     <footer className="border-t">
@@ -53,8 +59,7 @@ export default function Footer() {
                 {stringData(langData.AddressTitle)}
               </p>
               <p className="text-xs text-center md:text-end">
-                Rodovia Augusto Montenegro, 4300, Parque Office, Torre Norte,
-                Sala 614N Belém - Pará
+                {infos?.data.endereco}
               </p>
             </div>
             <div className="col-span-12 md:col-span-4 flex flex-col items-center md:items-end">
@@ -70,12 +75,33 @@ export default function Footer() {
                 {stringData(langData.FollowUs)}
               </p>
               <div className="flex gap-2">
-                <a href="/" rel="noreferrer" target="_blank">
-                  <Icon icon="mdi:facebook" className="text-xl" />
-                </a>
-                <a href="/" rel="noreferrer" target="_blank">
-                  <Icon icon="mdi:instagram" className="text-xl" />
-                </a>
+                {infos?.data.facebook && (
+                  <a
+                    href={infos?.data.facebook}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <Icon icon="mdi:facebook" className="text-2xl" />
+                  </a>
+                )}
+                {infos?.data.instagram && (
+                  <a
+                    href={infos?.data.instagram}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <Icon icon="mdi:instagram" className="text-2xl" />
+                  </a>
+                )}
+                {infos?.data.linkedin && (
+                  <a
+                    href={infos?.data.linkedin}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <Icon icon="mdi:linkedin" className="text-2xl" />
+                  </a>
+                )}
               </div>
             </div>
           </div>
