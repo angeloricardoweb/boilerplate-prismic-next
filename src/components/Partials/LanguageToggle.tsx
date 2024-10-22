@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 import React, { useEffect } from 'react'
 import Cookies from 'js-cookie'
@@ -29,7 +30,7 @@ export function LanguageToggle() {
         includedLanguages: 'en,pt',
         layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
       },
-      'google_translate_element'
+      'google_translate_element',
     )
   }
 
@@ -38,7 +39,7 @@ export function LanguageToggle() {
       const addScript = document.createElement('script')
       addScript.setAttribute(
         'src',
-        '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+        '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit',
       )
       document.body.appendChild(addScript)
       window.googleTranslateElementInit = googleTranslateElementInit
