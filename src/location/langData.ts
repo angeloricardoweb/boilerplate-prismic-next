@@ -23,6 +23,14 @@ export const langData = {
     'en-us': 'Contact Us',
     'pt-br': 'Fale conosco',
   },
+  Services: {
+    'en-us': 'Services',
+    'pt-br': 'Serviços',
+  },
+  Submenu: {
+    'en-us': 'Submenu',
+    'pt-br': 'Submenu',
+  },
   FrequentlyAskedQuestions: {
     'en-us': 'Frequently Asked Questions',
     'pt-br': 'Perguntas Frequentes',

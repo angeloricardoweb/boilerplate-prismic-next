@@ -19,7 +19,7 @@ export default function useNavLinks() {
     },
     {
       route: '/contatos',
-      name: stringData(langData.Contact),
+      name: stringData(langData.ContactUs),
     },
     {
       route: '/servicos',
