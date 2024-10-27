@@ -74,7 +74,7 @@ function CollapseItem({
         className="mt-4 flex w-full items-center justify-between rounded-lg bg-white p-4 shadow-md"
         onClick={() => setOpen(!open)}
       >
-        <h3 className="text-lg font-semibold">{title}</h3>
+        <h3 className="text-lg font-semibold text-start">{title}</h3>
         <ChevronDown
           size={24}
           className={`transform transition-transform ${
