@@ -21,6 +21,7 @@ const config: Config = {
     animation: {
       enter: 'fadeInRight 300ms ease-out',
       leave: 'fadeOutLeft 300ms ease-in forwards',
+      spin: 'spin 1s linear infinite',
     },
     keyframes: {
       fadeInRight: {
@@ -39,6 +40,14 @@ const config: Config = {
         },
         '100%': {
           opacity: '0',
+        },
+      },
+      spin: {
+        '0%': {
+          transform: 'rotate(0deg)',
+        },
+        '100%': {
+          transform: 'rotate(360deg)',
         },
       },
     },
