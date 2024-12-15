@@ -22,7 +22,7 @@ export const DialogActionConfirmation = (props: Props) => {
       <Dialog.Trigger asChild>{props.children}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/80" />
-        <Dialog.Content className="fixed left-[50%] top-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-2xl border border-zinc-600 bg-black p-10">
+        <Dialog.Content className="fixed left-[50%] top-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-2xl border border-zinc-600 bg-black p-10 data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut">
           <Dialog.Close className="absolute right-0 top-0 m-3 text-2xl text-white">
             <Icon icon="mdi:close" />
           </Dialog.Close>

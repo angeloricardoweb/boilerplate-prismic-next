@@ -22,6 +22,8 @@ const config: Config = {
       enter: 'fadeInRight 300ms ease-out',
       leave: 'fadeOutLeft 300ms ease-in forwards',
       spin: 'spin 1s linear infinite',
+      fadeIn: 'fadeIn 100ms ease-out',
+      fadeOut: 'fadeOut 100ms ease-in forwards',
     },
     keyframes: {
       fadeInRight: {
@@ -48,6 +50,22 @@ const config: Config = {
         },
         '100%': {
           transform: 'rotate(360deg)',
+        },
+      },
+      fadeIn: {
+        '0%': {
+          opacity: '0',
+        },
+        '100%': {
+          opacity: '1',
+        },
+      },
+      fadeOut: {
+        '0%': {
+          opacity: '1',
+        },
+        '100%': {
+          opacity: '0',
         },
       },
     },
