@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast'
 import 'swiper/css/bundle'
 import '../styles/index.scss'
 import DialogPrivacityPolicy from '@/components/Dialogs/DialogPrivacityPolicy'
+import ScrollToTopButton from '@/components/Partials/ScrollToTopButton'
 const inter = Inter({ subsets: ['latin'] })
 export const dynamic = 'force-dynamic'
 
@@ -58,6 +59,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <Header />
         {children}
+        <ScrollToTopButton />
         <Footer />
         <MenuHamburguer />
         <Toaster
