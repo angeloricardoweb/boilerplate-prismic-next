@@ -32,14 +32,11 @@ export default function DialogPrivacityPolicy() {
             utilizar nossos serviços, você concorda com tal monitoramento.
           </p>
           <div className="flex justify-between">
-            <Button onClick={setCookie} variant="outlinedBlack">
-              Aceitar Cookies
-            </Button>
+            <Button onClick={setCookie}>Aceitar Cookies</Button>
             <Button
               onClick={() => {
                 setOpen(false)
               }}
-              variant="outlinedBlack"
             >
               Rejeitar
             </Button>
