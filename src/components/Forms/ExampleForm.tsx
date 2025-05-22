@@ -43,7 +43,7 @@ export function ExampleForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
     reset,
     setValue,
     watch,
@@ -243,7 +243,7 @@ export function ExampleForm() {
         </div>
 
         <div className="col-span-3">
-          <Button variant="primaryGreen" type="submit" isLoading={isSubmitting}>
+          <Button variant={'default'} type="submit">
             Enviar
           </Button>
         </div>

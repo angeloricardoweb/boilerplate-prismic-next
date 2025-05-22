@@ -10,9 +10,7 @@ export function Welcome() {
 
   return (
     <div>
-      <Button variant={'primaryGreen'} onClick={handleShowToast}>
-        Click
-      </Button>
+      <Button onClick={handleShowToast}>Click</Button>
     </div>
   )
 }
