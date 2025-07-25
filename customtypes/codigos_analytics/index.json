@@ -1,0 +1,25 @@
+{
+  "format": "custom",
+  "id": "codigos_analytics",
+  "label": "Códigos Analytics",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "google_analytics": {
+        "type": "Text",
+        "config": {
+          "label": "Google Analytics",
+          "placeholder": "G-WB12DL23VY"
+        }
+      },
+      "microsoft_clarity": {
+        "type": "Text",
+        "config": {
+          "label": "Microsoft Clarity",
+          "placeholder": "p3as26fai2"
+        }
+      }
+    }
+  }
+}

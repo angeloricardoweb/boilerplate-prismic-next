@@ -72,6 +72,49 @@ export type BannersDocument<Lang extends string = string> =
   >
 
 /**
+ * Content for Códigos Analytics documents
+ */
+interface CodigosAnalyticsDocumentData {
+  /**
+   * Google Analytics field in *Códigos Analytics*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: G-WB12DL23VY
+   * - **API ID Path**: codigos_analytics.google_analytics
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  google_analytics: prismic.KeyTextField
+
+  /**
+   * Microsoft Clarity field in *Códigos Analytics*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: p3as26fai2
+   * - **API ID Path**: codigos_analytics.microsoft_clarity
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  microsoft_clarity: prismic.KeyTextField
+}
+
+/**
+ * Códigos Analytics document from Prismic
+ *
+ * - **API ID**: `codigos_analytics`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CodigosAnalyticsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<CodigosAnalyticsDocumentData>,
+    'codigos_analytics',
+    Lang
+  >
+
+/**
  * Content for Dados e Redes Sociais documents
  */
 interface DadosERedesSociaisDocumentData {
@@ -445,6 +488,7 @@ export type ServicoDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | BannersDocument
+  | CodigosAnalyticsDocument
   | DadosERedesSociaisDocument
   | DepoimentosDocument
   | FaqDocument
@@ -465,6 +509,8 @@ declare module '@prismicio/client' {
       BannersDocument,
       BannersDocumentData,
       BannersDocumentDataItemsItem,
+      CodigosAnalyticsDocument,
+      CodigosAnalyticsDocumentData,
       DadosERedesSociaisDocument,
       DadosERedesSociaisDocumentData,
       DepoimentosDocument,
