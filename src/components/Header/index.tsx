@@ -5,7 +5,7 @@ import { useWindowScroll } from 'react-use'
 import Link from 'next/link'
 import { Container } from '../Partials/Container'
 import useMenuHamburguerStore from '../../stores/useMenuHamburguerStore'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Icon from '../Adapters/Icon'
 import SearchForm from '../Forms/SearchForm'
 import { usePrismicLangs } from '@/hooks/usePrismicLangs'
@@ -13,6 +13,7 @@ import { useCookies } from '@/stores/useCookies'
 
 export function Header() {
   const { y } = useWindowScroll()
+  const [mounted, setMounted] = useState(false)
   const { setShowMenuHamburguer } = useMenuHamburguerStore()
   const { availableLangs } = usePrismicLangs()
   const pathname = typeof window !== 'undefined' ? window.location.pathname : ''
@@ -24,13 +25,14 @@ export function Header() {
   }
 
   useEffect(() => {
+    setMounted(true)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [pathname])
 
   return (
     <header
       className={`sticky top-0 z-50 w-full shadow-xl backdrop-blur transition-all ${
-        y > 0 ? 'bg-black/70' : 'bg-black'
+        mounted && y > 0 ? 'bg-black/70' : 'bg-black'
       } `}
     >
       <TopBar />
@@ -41,7 +43,7 @@ export function Header() {
               src="/img/logo.png"
               alt=""
               className="cursor-pointer py-3 transition-all"
-              style={{ height: y > 0 ? '3rem' : '4rem' }}
+              style={{ height: mounted && y > 0 ? '3rem' : '4rem' }}
             />
           </Link>
           <SearchForm />
