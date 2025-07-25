@@ -8,6 +8,8 @@ import 'swiper/css/bundle'
 import '../styles/index.scss'
 import DialogPrivacityPolicy from '@/components/Dialogs/DialogPrivacityPolicy'
 import ScrollToTopButton from '@/components/Partials/ScrollToTopButton'
+import GoogleAnalytics from '@/seo/GoogleAnalytics'
+import MicrosoftClarity from '@/seo/MicrosoftClarity'
 const inter = Inter({ subsets: ['latin'] })
 export const dynamic = 'force-dynamic'
 
@@ -72,6 +74,8 @@ export default function RootLayout({
         />
         <DialogPrivacityPolicy />
       </body>
+      <GoogleAnalytics />
+      <MicrosoftClarity />
     </html>
   )
 }
